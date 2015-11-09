@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "solutions.h"
+
 /* definitions */
 #define MAXINT 2
 

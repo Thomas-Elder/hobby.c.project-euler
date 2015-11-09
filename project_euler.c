@@ -25,6 +25,7 @@ int main(void) {
 		switch (input) {
 			case 1:
 				printf("%s\n", "Multiples of 3 and 5 not yet implemented.");
+				multiples_3_and_5();
 				break;
 			case 0:
 				return 0;

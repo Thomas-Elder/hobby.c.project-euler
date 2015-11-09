@@ -4,7 +4,7 @@ CFLAGS= -Wall -Wextra -Werror -pedantic -Wundef
 
 # rebuildables
 TARGET = project_euler.exe
-OBJECTS = project_euler.o
+OBJECTS = project_euler.o solutions.o
 REBUILD = $(OBJECTS) $(TARGET)
 
 # all has the executable as it's dependency. default rule.
@@ -22,16 +22,16 @@ $(TARGET): $(OBJECTS)
 %.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $^
 
-# build the recursion object file, unlinked, with the relevent
+# build the project_euler object file, unlinked, with the relevent
 # source and header files as dependencies
 # '-c $<' - compile, unlinked, the first dependency
-recursion.o: recursion.c
+project_euler.o: project_euler.c
 	$(CC) $(CFLAGS) -c $<
 
-# build the recursive_functions object file, unlinked, with the relevent
+# build the solutions object file, unlinked, with the relevent
 # source and header files as dependencies
 # '-c $<' - compile, unlinked, the first dependency
-recursive_functions.o: recursive_functions.c
+solutions.o: solutions.c
 	$(CC) $(CFLAGS) -c $<
 
 # rm all rebuildables (object and executables)
