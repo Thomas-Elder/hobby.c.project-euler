@@ -16,6 +16,9 @@ int main(void) {
 		printf("%s\n", "Welcome to Tom's Project Euler solutions!");
 		printf("%s\n", "Please select from the following solutions:");
 		printf("%s\n", "1 - Multiples of 3 and 5");
+		printf("%s\n", "2 - Even Fibonacci numbers");
+		printf("%s\n", "");
+		printf("%s\n", "");
 		printf("%s\n", "0 - Exit");
 		printf("%s\n", "");
 
@@ -26,6 +29,9 @@ int main(void) {
 		switch (input) {
 			case 1:
 				multiples_3_and_5();
+				break;
+			case 2:
+				even_fibonacci_numbers();
 				break;
 			case 0:
 				return 0;

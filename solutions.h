@@ -11,5 +11,6 @@
 
 /* prototypes */
 void multiples_3_and_5();
+void even_fibonacci_numbers();
 
 #endif
