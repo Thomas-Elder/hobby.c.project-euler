@@ -17,6 +17,7 @@ int main(void) {
 		printf("%s\n", "Please select from the following solutions:");
 		printf("%s\n", "1 - Multiples of 3 and 5");
 		printf("%s\n", "0 - Exit");
+		printf("%s\n", "");
 
 		fgets(buffer, MAXINT, stdin);
 		read_rest_of_line();
@@ -24,7 +25,6 @@ int main(void) {
 
 		switch (input) {
 			case 1:
-				printf("%s\n", "Multiples of 3 and 5 not yet implemented.");
 				multiples_3_and_5();
 				break;
 			case 0:
