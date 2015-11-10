@@ -1,10 +1,10 @@
 # compiler and flags
 CC=gcc
-CFLAGS= -Wall -Wextra -Werror -pedantic -Wundef
+CFLAGS= -Wall -Wextra -Werror -pedantic -Wundef -std=c99
 
 # rebuildables
 TARGET = project_euler.exe
-OBJECTS = project_euler.o solutions.o
+OBJECTS = project_euler.o solutions.o utility.o
 REBUILD = $(OBJECTS) $(TARGET)
 
 # all has the executable as it's dependency. default rule.
@@ -32,6 +32,12 @@ project_euler.o: project_euler.c
 # source and header files as dependencies
 # '-c $<' - compile, unlinked, the first dependency
 solutions.o: solutions.c
+	$(CC) $(CFLAGS) -c $<
+
+# build the solutions object file, unlinked, with the relevent
+# source and header files as dependencies
+# '-c $<' - compile, unlinked, the first dependency
+utility.o: utility.c
 	$(CC) $(CFLAGS) -c $<
 
 # rm all rebuildables (object and executables)

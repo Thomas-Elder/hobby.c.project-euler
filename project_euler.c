@@ -13,11 +13,12 @@ int main(void) {
 	while (input != 0){
 
 		/* menu */
+		printf("%s\n", "");
 		printf("%s\n", "Welcome to Tom's Project Euler solutions!");
 		printf("%s\n", "Please select from the following solutions:");
 		printf("%s\n", "1 - Multiples of 3 and 5");
 		printf("%s\n", "2 - Even Fibonacci numbers");
-		printf("%s\n", "");
+		printf("%s\n", "3 - Largest Prime factor");
 		printf("%s\n", "");
 		printf("%s\n", "0 - Exit");
 		printf("%s\n", "");
@@ -32,6 +33,9 @@ int main(void) {
 				break;
 			case 2:
 				even_fibonacci_numbers();
+				break;
+			case 3:
+				largest_prime_factor();
 				break;
 			case 0:
 				return 0;
