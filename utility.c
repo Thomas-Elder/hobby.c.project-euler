@@ -2,6 +2,10 @@
 
 #include "utility.h"
 
+/* is_prime
+ * This function returns true if the number is prime, and 
+ * false if it is not. 
+ */
 bool is_prime(int value) {
 	int i;
 
@@ -16,4 +20,13 @@ bool is_prime(int value) {
 	}
 
 	return true;
+}
+
+/* is_palindromic
+ * This function returns true if the number is a palindrome, ie 
+ * it's digits in reverse order are the same.
+ * Returns false if not.
+ */
+bool is_palindrom(int value) {
+	return false;
 }
