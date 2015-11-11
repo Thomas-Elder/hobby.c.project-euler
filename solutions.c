@@ -115,9 +115,9 @@ void largest_palindrome_product() {
 	for (i = 100; i < 1000; i++) {
 		for (j = 100; j < 1000; j++) {
 			if (is_palindrome(i * j)) {
-
-				if (i * j > result)
+				if (i * j > result) {
 					result = i * j;
+				}
 			}
 		}
 	}

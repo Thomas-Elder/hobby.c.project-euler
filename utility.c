@@ -36,12 +36,8 @@ bool is_palindrome(int value) {
 
 	reverse = reverse_int(value);
 
-	if (value == reverse) {
-
-		printf("%d%s%d\n", value, " == ", reverse);
-
+	if (value == reverse) 
 		return true;
-	}
 
 	return false;
 }
