@@ -13,6 +13,7 @@
 
 /* prototypes */
 bool is_prime(int value);
-bool is_palindrom(int value);
+bool is_palindrome(int value);
+int reverse_int(int value);
 
 #endif

@@ -19,7 +19,8 @@ int main(void) {
 		printf("%s\n", "1 - Multiples of 3 and 5");
 		printf("%s\n", "2 - Even Fibonacci numbers");
 		printf("%s\n", "3 - Largest Prime factor");
-		printf("%s\n", "");
+		printf("%s\n", "4 - Largest palindrome product");
+		printf("%s\n", "5 - Smallest multiple");
 		printf("%s\n", "0 - Exit");
 		printf("%s\n", "");
 
@@ -36,6 +37,12 @@ int main(void) {
 				break;
 			case 3:
 				largest_prime_factor();
+				break;
+			case 4:
+				largest_palindrome_product();
+				break;
+			case 5:
+				printf("%s\n", "Not yet implemented");
 				break;
 			case 0:
 				return 0;

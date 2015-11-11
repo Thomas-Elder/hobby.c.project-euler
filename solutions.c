@@ -99,17 +99,30 @@ void largest_prime_factor() {
 	printf("%s\n", "");
 }
 
-void largst_palindrome_product() {
+void largest_palindrome_product() {
 
 	/* local variables */
-	
+	int i, j, result;
+
+	result = 0;
 
 	printf("%s\n", "Largest palindrome product");
-	printf("%s\n%s\n", "A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.",
+	printf("%s\n%s\n%s\n", "A palindromic number reads the same both ways.",
+		"The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 * 99.",
 		"Find the largest palindrome made from the product of two 3-digit numbers.");
 	printf("%s\n", "");
 
-	printf("%s%d\n", "The largest palimdromic product of two 3 digit numbers is: ", 6);
-	/*printf("%s\n", "Confirmed correct on Project Euler.");*/
+	for (i = 100; i < 1000; i++) {
+		for (j = 100; j < 1000; j++) {
+			if (is_palindrome(i * j)) {
+
+				if (i * j > result)
+					result = i * j;
+			}
+		}
+	}
+
+	printf("%s%d\n", "The largest palimdromic product of two 3 digit numbers is: ", result);
+	printf("%s\n", "Confirmed correct on Project Euler.");
 	printf("%s\n", "");
 }	
