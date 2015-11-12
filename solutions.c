@@ -152,25 +152,29 @@ void smallest_multiple() {
 	/* initilise */
 	result = 0;
 
-	for (i = 2520; i < 2147483647; i += 2520) {
-		for (j = 20; j >= 10; j--) {
-			if (i % j != 0)
+	for (i = 2520; i < 2147483647; i+=2520) {
+		for (j = 20; j > 10; j--) {
+			if (i % j != 0)	{
 				break;
+			}
 		}
 
 		printf("%s%d\n", "i = ", i);
+		printf("%s%d\n", "j = ", j);
 		printf("%s%d\n", "result = ", result);
 
 		if (j == 10) {
+
+			printf("%s%d\n", "result: ", i);
+
 			result = i;
 			break;
 		}
 	}
 
-
 	/* print result */
 	printf("%s%d\n", "The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is: ", result);
-	/*printf("%s\n", "Confirmed correct on Project Euler.");*/
+	printf("%s\n", "Confirmed correct on Project Euler.");
 	printf("%s\n", "");
 }
 
