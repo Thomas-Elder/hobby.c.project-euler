@@ -42,7 +42,7 @@ int main(void) {
 				largest_palindrome_product();
 				break;
 			case 5:
-				printf("%s\n", "Not yet implemented");
+				smallest_multiple();
 				break;
 			case 0:
 				return 0;
