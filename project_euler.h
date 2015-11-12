@@ -8,11 +8,9 @@
 #include <stdlib.h>
 
 #include "solutions.h"
+#include "utility.h"
 
 /* definitions */
 #define MAXINT 2
-
-/* prototypes */
-void read_rest_of_line(void);
 
 #endif

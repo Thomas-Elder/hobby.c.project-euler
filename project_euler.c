@@ -55,19 +55,3 @@ int main(void) {
 	return 0;
 }
 
-/* Function Definitions */
-void read_rest_of_line(void)
-{
-	/* local variables */
-    int ch;
-
-    /* read characters one at a time from standard input until there are
-     * no characters left to read
-     */
-    while (ch=getc(stdin), ch!=EOF && ch!='\n'){
-        printf("%s : %c\n", "Reading from buffer character", ch);
-    }
-    
-    /* reset the error status of the input FILE pointer */
-    clearerr(stdin);
-}

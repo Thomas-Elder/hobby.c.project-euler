@@ -15,5 +15,6 @@
 bool is_prime(int value);
 bool is_palindrome(int value);
 int reverse_int(int value);
+void read_rest_of_line(void);
 
 #endif

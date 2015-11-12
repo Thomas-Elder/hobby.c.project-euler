@@ -2,6 +2,8 @@
 
 #include "utility.h"
 
+/* Function Definitions */
+
 /* is_prime
  * This function returns true if the number is prime, and 
  * false if it is not. 
@@ -60,4 +62,25 @@ int reverse_int(int value) {
 	}
 
 	return reverse;
+}
+
+/* read_rest_of_line
+ * This function reads characters from the standard input until there are 
+ * no characters left to read. This is so when someone enters 5 chars, when
+ * you only need 2, the remaining 3 chars are read from the input buffer, and
+ * aren't read into subsequent input reads. */
+void read_rest_of_line(void)
+{
+	/* local variables */
+    int ch;
+
+    /* read characters one at a time from standard input until there are
+     * no characters left to read
+     */
+    while (ch=getc(stdin), ch!=EOF && ch!='\n'){
+        /*printf("%s : %c\n", "Reading from buffer character", ch);*/
+    }
+    
+    /* reset the error status of the input FILE pointer */
+    clearerr(stdin);
 }
