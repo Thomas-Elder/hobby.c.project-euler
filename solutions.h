@@ -16,5 +16,6 @@ void even_fibonacci_numbers();
 void largest_prime_factor();
 void largest_palindrome_product();
 void smallest_multiple();
+void sum_square_difference();
 
 #endif

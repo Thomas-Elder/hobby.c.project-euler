@@ -21,6 +21,7 @@ int main(void) {
 		printf("%s\n", "3 - Largest Prime factor");
 		printf("%s\n", "4 - Largest palindrome product");
 		printf("%s\n", "5 - Smallest multiple");
+		printf("%s\n", "6 - Sum square difference");
 		printf("%s\n", "0 - Exit");
 		printf("%s\n", "");
 
@@ -43,6 +44,9 @@ int main(void) {
 				break;
 			case 5:
 				smallest_multiple();
+				break;
+			case 6:
+				sum_square_difference();
 				break;
 			case 0:
 				return 0;
