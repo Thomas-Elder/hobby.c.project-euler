@@ -222,6 +222,7 @@ void sum_square_difference() {
 void ten_thousand_and_first_prime() {
 
 	/* local variables */
+	int i, count, result;
 
 	/* print title and problem */
 	printf("%s\n", "10001st prime");
@@ -231,13 +232,27 @@ void ten_thousand_and_first_prime() {
 		printf("%s\n", "");
 
 	/* initilise */
-
+	count = 1;
+	result = 0;
+	i = 2;
 
 	/* go */
+	while (count != 10002) {
+
+		if (i > 2 && i % 2 == 0) {
+		} else {
+			if (is_prime(i)) {
+				result = i;
+				count++;
+			}
+		}
+
+		i++;
+	}
 
 	/* print result */
-	printf("%s%d\n", "the 10 001st prime number is: ", 7);
-	/*printf("%s\n", "Confirmed correct on Project Euler.");*/
+	printf("%s%d\n", "the 10 001st prime number is: ", result);
+	printf("%s\n", "Confirmed correct on Project Euler.");
 	printf("%s\n", "");
 
 }
