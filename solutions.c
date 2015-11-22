@@ -181,6 +181,7 @@ void smallest_multiple() {
 void sum_square_difference() {
 
 	/* local variables */
+	int i, n, sumsquare, squaresum, result;
 
 	/* print title and problem */
 	printf("%s\n", "Sum square difference");
@@ -194,10 +195,27 @@ void sum_square_difference() {
 	printf("%s\n", "");
 
 	/* initilise */
+	n = 100;
+	sumsquare = 0;
+	squaresum = 0;
+	result = 0;
+
+	/* go */
+	for (i = 1; i <= n; i++) {
+		sumsquare += i*i;
+		squaresum += i;
+	}
+	
+	squaresum = squaresum*squaresum;
+
+	printf("%s%d\n", "Sum of the squares is: ", sumsquare);
+	printf("%s%d\n", "Square of the sum is: ", squaresum);
+
+	result = squaresum - sumsquare;
 
 	/* print result */
-	printf("%s%d\n", "The difference between the sum of the squares and the square of the sum of the first one hundred natural numbers is: ", 5);
-	/*printf("%s\n", "Confirmed correct on Project Euler.");*/
+	printf("%s%d\n", "The difference between the sum of the squares and the square of the sum of the first one hundred natural numbers is: ", result);
+	printf("%s\n", "Confirmed correct on Project Euler.");
 	printf("%s\n", "");
 }
 
