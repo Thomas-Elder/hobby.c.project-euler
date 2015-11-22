@@ -219,3 +219,25 @@ void sum_square_difference() {
 	printf("%s\n", "");
 }
 
+void ten_thousand_and_first_prime() {
+
+	/* local variables */
+
+	/* print title and problem */
+	printf("%s\n", "10001st prime");
+	printf("%s\n%s\n", 
+		"By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.",
+		"What is the 10 001st prime number?");
+		printf("%s\n", "");
+
+	/* initilise */
+
+
+	/* go */
+
+	/* print result */
+	printf("%s%d\n", "the 10 001st prime number is: ", 7);
+	/*printf("%s\n", "Confirmed correct on Project Euler.");*/
+	printf("%s\n", "");
+
+}

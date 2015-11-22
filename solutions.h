@@ -17,5 +17,6 @@ void largest_prime_factor();
 void largest_palindrome_product();
 void smallest_multiple();
 void sum_square_difference();
+void ten_thousand_and_first_prime();
 
 #endif

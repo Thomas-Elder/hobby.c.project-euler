@@ -22,6 +22,7 @@ int main(void) {
 		printf("%s\n", "4 - Largest palindrome product");
 		printf("%s\n", "5 - Smallest multiple");
 		printf("%s\n", "6 - Sum square difference");
+		printf("%s\n", "7 - 10001st prime");
 		printf("%s\n", "0 - Exit");
 		printf("%s\n", "");
 
@@ -47,6 +48,9 @@ int main(void) {
 				break;
 			case 6:
 				sum_square_difference();
+				break;
+			case 7:
+				ten_thousand_and_first_prime();
 				break;
 			case 0:
 				return 0;
