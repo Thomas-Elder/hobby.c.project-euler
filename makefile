@@ -1,6 +1,6 @@
 # compiler and flags
 CC=gcc
-CFLAGS= -Wall -Wextra -Werror -pedantic -Wundef -std=c99
+CFLAGS = -Wall -Wextra -Werror -pedantic -Wundef -std=c99
 
 # paths
 SRC_DIR = src\
@@ -24,8 +24,8 @@ $(TARGET): $(OBJECTS)
 # build all object files, unlinked with all source files as dependencies
 # '-o $@' - send output to the target, in this case, all object files
 # '-c $^' - compile, unlinked, all dependencies
-obj\%.o: %.c
-	$(CC) $(CFLAGS) -o $@ -c $^
+#obj\%.o: %.c
+#	$(CC) $(CFLAGS) -o $@ -c $^
 
 # build the project_euler object file, unlinked, with the relevent
 # source and header files as dependencies

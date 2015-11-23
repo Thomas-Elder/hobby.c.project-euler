@@ -1,4 +1,3 @@
-
 Project Euler Problems
 
 This textfile was found here; 
