@@ -2,14 +2,12 @@
 CC=gcc
 CFLAGS = -Wall -Wextra -Werror -pedantic -Wundef -std=c99
 
-# paths
-SRC_DIR = src\
-OBJ_DIR = obj\
-BIN_DIR = bin\
-
 # rebuildables
-TARGET = bin\project_euler.exe
-OBJECTS = obj\project_euler.o obj\solutions.o obj\utility.o
+EXE = project_euler.exe
+OBJ = project_euler.o solutions.o utility.o
+
+TARGET = $(addprefix bin\,$(EXE))
+OBJECTS = $(addprefix obj\,$(OBJ))
 REBUILD = $(OBJECTS) $(TARGET)
 
 # all has the executable as it's dependency. default rule.
@@ -20,12 +18,6 @@ all: $(TARGET)
 # $^ - all dependencies
 $(TARGET): $(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^
-
-# build all object files, unlinked with all source files as dependencies
-# '-o $@' - send output to the target, in this case, all object files
-# '-c $^' - compile, unlinked, all dependencies
-#obj\%.o: %.c
-#	$(CC) $(CFLAGS) -o $@ -c $^
 
 # build the project_euler object file, unlinked, with the relevent
 # source and header files as dependencies
