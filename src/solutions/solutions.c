@@ -1,7 +1,7 @@
 /* solutions.c */
 
 #include "solutions.h"
-#include "utility.h"
+#include "..\utility\utility.h"
 
 void multiples_3_and_5() {
 

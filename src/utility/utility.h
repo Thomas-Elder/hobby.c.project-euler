@@ -4,7 +4,7 @@
 #define UTILITY_H_INCLUDED
 
 /* includes */
-#include "project_euler.h"
+#include "..\project_euler.h"
 #include <math.h> 
 #include <stdbool.h>
 

@@ -7,8 +7,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "solutions.h"
-#include "utility.h"
+#include "solutions\solutions.h"
+#include "utility\utility.h"
 
 /* definitions */
 #define MAXINT 2
