@@ -23,6 +23,11 @@ int main(void) {
 		printf("%s\n", "5 - Smallest multiple");
 		printf("%s\n", "6 - Sum square difference");
 		printf("%s\n", "7 - 10001st prime");
+		printf("%s\n", "8 - Largest product in a series");
+		printf("%s\n", "9 - Special Pythagorean triplet");
+		printf("%s\n", "10 - Summation of primes");
+		printf("%s\n", "11 - Largest product in a grid");
+		printf("%s\n", "12 - Highly divisible triangular number");
 		printf("%s\n", "0 - Exit");
 		printf("%s\n", "");
 
@@ -55,7 +60,7 @@ int main(void) {
 			case 0:
 				return 0;
 			default:
-				printf("%s\n", "Invalid input, try again.");
+				printf("%s\n", "Solution not yet implemented.");
 				break;
 		}
 	}
