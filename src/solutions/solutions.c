@@ -273,7 +273,7 @@ void largest_product_in_a_series() {
 	result = 0;
 
 
-	/* convert 
+	/* convert */
 
 	/* print result */
 	printf("%s%d\n", "argest product in this series is: ", result);

@@ -10,21 +10,24 @@
 #include <stdlib.h>
 
 /* definitions */
-struct node {
+typedef struct node {
 	int value;
 	struct node *next;
-};
+} Node;
 
-struct list {
+typedef struct list {
 	struct node *head;
 	struct node *tail;
 	int size;
-};
+} List;
 
 /* prototypes */
-int pop(void);
+int init(List *list);
+
 int push(void);
+void pop(int value);
+
 int enqueue(void);
-int dequeue(void);
+void dequeue(int value);
 
 #endif
