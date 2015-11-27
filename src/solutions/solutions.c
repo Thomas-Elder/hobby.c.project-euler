@@ -256,3 +256,27 @@ void ten_thousand_and_first_prime() {
 	printf("%s\n", "");
 
 }
+
+void largest_product_in_a_series() {
+
+	/* local variables */
+	int result;
+
+	/* print title and problem */
+	printf("%s\n", "Largest product in a series");
+	printf("%s\n%s\n", 
+		"The four adjacent digits in the 1000-digit number that have the greatest product are 9 - 9 - 8 - 9 = 5832.",
+		"Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?");
+		printf("%s\n", "");
+
+	/* initilise */
+	result = 0;
+
+
+	/* convert 
+
+	/* print result */
+	printf("%s%d\n", "argest product in this series is: ", result);
+	/*printf("%s\n", "Confirmed correct on Project Euler.");*/
+	printf("%s\n", "");
+}

@@ -18,5 +18,6 @@ void largest_palindrome_product();
 void smallest_multiple();
 void sum_square_difference();
 void ten_thousand_and_first_prime();
+void largest_product_in_a_series();
 
 #endif

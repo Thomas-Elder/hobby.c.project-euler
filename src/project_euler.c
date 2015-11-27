@@ -57,6 +57,9 @@ int main(void) {
 			case 7:
 				ten_thousand_and_first_prime();
 				break;
+			case 8:
+				largest_product_in_a_series();
+				break;
 			case 0:
 				return 0;
 			default:
