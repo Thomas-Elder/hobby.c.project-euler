@@ -261,6 +261,9 @@ void largest_product_in_a_series() {
 
 	/* local variables */
 	int result;
+	char series[1005];
+
+	FILE *fp;
 
 	/* print title and problem */
 	printf("%s\n", "Largest product in a series");
@@ -272,11 +275,32 @@ void largest_product_in_a_series() {
 	/* initilise */
 	result = 0;
 
+	printf("%s\n", "Testing file access... ");
 
-	/* convert */
+	char cCurrentPath[FILENAME_MAX];
+
+ 	if (!GetCurrentDir(cCurrentPath, sizeof(cCurrentPath)))
+     	printf("%s\n", "Error!");
+
+     cCurrentPath[sizeof(cCurrentPath) - 1] = '\0'; /* not really required */
+
+	printf ("The current working directory is %s", cCurrentPath);
+
+	fp = fopen("E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt", "r");
+
+	if (fp == NULL) {
+		printf("%s\n", "pointer is null");
+	} else {
+		printf("%s", "Pointer is not null, first char:");		
+		printf("%c\n", getc(fp));
+
+		series[0] = getc(fp);
+		printf("%s", "Pointer is not null, second char via series[]:");
+		printf("%c\n", series[0]);
+	}
 
 	/* print result */
-	printf("%s%d\n", "argest product in this series is: ", result);
+	printf("%s%d\n", "Largest product in this series is: ", result);
 	/*printf("%s\n", "Confirmed correct on Project Euler.");*/
 	printf("%s\n", "");
 }
