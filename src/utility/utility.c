@@ -93,3 +93,28 @@ void print_directory(void) {
 
 	printf("%s%s\n", "This program is being run from: ", cCurrentPath);
 }
+
+/* get_int
+ * Reads from stdin and stores a single integer conversion in the passed int ptr.
+ */
+void get_int(int *input) {
+
+	/* local variables */
+	char buffer[256];
+
+	fgets(buffer, MAXINT, stdin);
+	read_rest_of_line();
+	*input = atoi(buffer);
+}
+
+/* get_big_int
+ * Reads from stdin and stores the integer conversion in the passed int ptr.
+ */
+void get_big_int(int *input) {
+
+	/* local variables */
+	char buffer[256];
+
+	fgets(buffer, MAXBIGINT, stdin);
+	*input = atoi(buffer);
+}

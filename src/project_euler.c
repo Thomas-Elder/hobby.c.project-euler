@@ -5,7 +5,6 @@
 int main(void) {
 
 	/* local variables */
-	char buffer[256];
 	int input;
 
 	printf("%s\n", "");
@@ -32,11 +31,8 @@ int main(void) {
 		printf("%s\n", "11 - Largest product in a grid");
 		printf("%s\n", "12 - Highly divisible triangular number");
 		printf("%s\n", "0 - Exit");
-		printf("%s\n", "");
 
-		fgets(buffer, MAXINT, stdin);
-		read_rest_of_line();
-		input = atoi(buffer);
+		get_int(&input);
 
 		solutions(input);
 	}
@@ -71,6 +67,8 @@ void solutions(int menuChoice) {
 		case 8:
 			largest_product_in_a_series();
 			break;
+		case 0:
+			break;	
 		default:
 			printf("%s\n", "Solution not yet implemented.");
 			break;
@@ -78,14 +76,48 @@ void solutions(int menuChoice) {
 }
 
 void problem_1() {
+
+	/* local variables */
+	int a, b, limit, input;
 	
+	a = 0;
+	b = 0;
+	limit = 0;
+	input = 0;
+
 	/* print title and problem */
-	printf("%s\n", "Multiples of 3 and 5");
-	printf("%s\n", "If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.");
+	printf("%s\n", "Sum the multiples of two numbers.");
+	printf("%s%s\n", "If we list all the natural numbers below 10 that are multiples", 
+		"of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23."); 
+	printf("%s\n", "The Project Euler problem is: find the sum of all the multiples of 3 or 5 below 1000.");
 	printf("\n");
 
+	printf("%s", "If you would like to see the Project Euler solution, press 0, press 1 to enter your own: ");
+	get_int(&input);
+	printf("\n");
+
+	if (input == 0) {
+		a = 3;
+		b = 5;
+		limit = 1000;
+	} else {
+		printf("%s", "Enter first number to sum: ");
+		get_big_int(&a);
+
+		printf("%s", "Enter second number to sum: ");
+		get_big_int(&b);
+
+		printf("%s", "Enter limit for multiples: ");
+		get_big_int(&limit);
+	}
+
 	/* print result */
-	printf("%s%d\n", "The sum of multiples of 3 and 5 under 1000 is: ", multiples_3_and_5());
+	printf("The sum of multiples of %d and %d under %d is %d.\n", 
+		a,
+		b, 
+		limit, 
+		sum_multiples(a, b, limit));
+
 	printf("%s\n", "Confirmed correct on Project Euler.");
 	printf("\n");
 }

@@ -17,5 +17,7 @@ bool is_palindrome(int value);
 int reverse_int(int value);
 void read_rest_of_line(void);
 void print_directory(void);
+void get_int(int *input);
+void get_big_int(int *input);
 
 #endif

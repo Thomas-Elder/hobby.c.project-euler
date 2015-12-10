@@ -2,7 +2,7 @@
 
 #include "solutions.h"
 
-int multiples_3_and_5() {
+int sum_multiples(int a, int b, int limit) {
 
 	/* local variables */
 	int i, sum;
@@ -10,8 +10,12 @@ int multiples_3_and_5() {
 	/* initilise */
 	sum = 0;
 
-	for (i = 1; i < 1000; i++) {
-		if (i % 3 == 0 || i % 5 == 0) {
+	printf("Value of a: %d\n", a);
+	printf("Value of b: %d\n", b);
+	printf("Value of limit: %d\n", limit);
+
+	for (i = 1; i < limit; i++) {
+		if (i % a == 0 || i % b == 0) {
 			sum += i;
 		}
 	}
