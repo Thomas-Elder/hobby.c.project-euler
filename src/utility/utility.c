@@ -4,6 +4,21 @@
 
 /* Function Definitions */
 
+/* working_directory
+ * 
+ */
+void working_directory(char *c) {
+
+	char working_directory[FILENAME_MAX];
+
+ 	if (!GetCurrentDir(working_directory, sizeof(working_directory)))
+     	printf("%s\n", "Error!");
+
+    working_directory[sizeof(working_directory) - 1] = '\0'; /* not really required */
+
+    strcpy(c, working_directory);
+}
+
 /* is_prime
  * This function returns true if the number is prime, and 
  * false if it is not. 

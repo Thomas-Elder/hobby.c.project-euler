@@ -56,7 +56,7 @@ clean:
 
 # rebuildables
 TEST_EXE = test.exe
-TEST_OBJ = solutions.o utility.o stack.o test-stack.o
+TEST_OBJ = solutions.o utility.o stack.o test.o
 
 TEST_TARGET = $(addprefix test\bin\,$(TEST_EXE))
 TEST_OBJECTS = $(addprefix test\obj\,$(TEST_OBJ))
@@ -75,7 +75,7 @@ $(TEST_TARGET): $(TEST_OBJECTS)
 # source and header files as dependencies
 # '-o $@' - send output to the target
 # '-c $<' - compile, unlinked, the first dependency
-test\obj\test-stack.o: test\test-stack.c
+test\obj\test.o: test\test.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 # build the solutions object file, unlinked, with the relevent
