@@ -38,38 +38,41 @@ int main(void) {
 		read_rest_of_line();
 		input = atoi(buffer);
 
-		switch (input) {
-			case 1:
-				multiples_3_and_5();
-				break;
-			case 2:
-				even_fibonacci_numbers();
-				break;
-			case 3:
-				largest_prime_factor();
-				break;
-			case 4:
-				largest_palindrome_product();
-				break;
-			case 5:
-				smallest_multiple();
-				break;
-			case 6:
-				sum_square_difference();
-				break;
-			case 7:
-				ten_thousand_and_first_prime();
-				break;
-			case 8:
-				largest_product_in_a_series();
-				break;
-			case 0:
-				return 0;
-			default:
-				printf("%s\n", "Solution not yet implemented.");
-				break;
-		}
+		solutions(input);
 	}
 
 	return 0;
+}
+
+void solutions(int menuChoice) {
+
+	switch (menuChoice) {
+		case 1:
+			multiples_3_and_5();
+			break;
+		case 2:
+			even_fibonacci_numbers();
+			break;
+		case 3:
+			largest_prime_factor();
+			break;
+		case 4:
+			largest_palindrome_product();
+			break;
+		case 5:
+			smallest_multiple();
+			break;
+		case 6:
+			sum_square_difference();
+			break;
+		case 7:
+			ten_thousand_and_first_prime();
+			break;
+		case 8:
+			largest_product_in_a_series();
+			break;
+		default:
+			printf("%s\n", "Solution not yet implemented.");
+			break;
+	}
 }

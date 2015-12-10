@@ -17,4 +17,7 @@
 /* definitions */
 #define MAXINT 2
 
+/* prototypes */
+void solutions(int menuChoice);
+
 #endif
