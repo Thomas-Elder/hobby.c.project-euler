@@ -16,5 +16,6 @@
 
 /* prototypes */
 int test_problem_1(void);
+int test_problem_2(void);
 
 #endif

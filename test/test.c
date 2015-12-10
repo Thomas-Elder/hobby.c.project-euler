@@ -26,6 +26,7 @@ int main(void)
 	printf("%s\n", "8 - Largest product in a series");
 
 	results[0] = test_problem_1();
+	results[1] = test_problem_2();
 
 	printf("\n");
 	for (i = 0; i < 8; i++) {
@@ -41,4 +42,8 @@ int main(void)
 
 int test_problem_1(void) {
 	return 0;
-}	
+}
+
+int test_problem_2(void) {
+	return 0;
+}
