@@ -2,6 +2,8 @@
 
 #include "solutions.h"
 
+/* sum_multiples
+ */
 int sum_multiples(int a, int b, int limit) {
 
 	/* local variables */
