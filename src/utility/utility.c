@@ -80,3 +80,16 @@ void read_rest_of_line(void)
     /* reset the error status of the input FILE pointer */
     clearerr(stdin);
 }
+
+/* print_directory
+ * Prints the directory from which the program is being run.
+ */
+void print_directory(void) {
+
+	/* local variables */
+	char cCurrentPath[FILENAME_MAX];
+
+	working_directory(cCurrentPath);
+
+	printf("%s%s\n", "This program is being run from: ", cCurrentPath);
+}

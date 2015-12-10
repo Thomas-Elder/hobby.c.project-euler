@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -pedantic -Wundef -std=c99
 
 # rebuildables
 EXE = project_euler.exe
-OBJ = project_euler.o solutions.o utility.o
+OBJ = project_euler.o solutions.o utility.o file.o
 
 TARGET = $(addprefix bin\,$(EXE))
 OBJECTS = $(addprefix obj\,$(OBJ))
@@ -39,6 +39,13 @@ obj\solutions.o: src\solutions\solutions.c
 # '-o $@' - send output to the target
 # '-c $<' - compile, unlinked, the first dependency
 obj\utility.o: src\utility\utility.c
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+# build the solutions object file, unlinked, with the relevent
+# source and header files as dependencies
+# '-o $@' - send output to the target
+# '-c $<' - compile, unlinked, the first dependency
+obj\file.o: src\utility\file.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 # rm all rebuildables (object and executables)

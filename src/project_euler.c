@@ -8,13 +8,16 @@ int main(void) {
 	char buffer[256];
 	int input;
 
+	printf("%s\n", "");
+	printf("%s\n", "Welcome to Tom's Project Euler solutions!");
+	print_directory();
+
 	input = -1;
 
 	while (input != 0){
 
 		/* menu */
 		printf("%s\n", "");
-		printf("%s\n", "Welcome to Tom's Project Euler solutions!");
 		printf("%s\n", "Please select from the following solutions:");
 		printf("%s\n", "1 - Multiples of 3 and 5");
 		printf("%s\n", "2 - Even Fibonacci numbers");
@@ -70,4 +73,3 @@ int main(void) {
 
 	return 0;
 }
-

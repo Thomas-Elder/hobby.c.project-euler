@@ -1,7 +1,6 @@
 /* solutions.c */
 
 #include "solutions.h"
-#include "..\utility\utility.h"
 
 void multiples_3_and_5() {
 
@@ -260,8 +259,10 @@ void ten_thousand_and_first_prime() {
 void largest_product_in_a_series() {
 
 	/* local variables */
-	int result;
-	char series[1005];
+	int start, end, i;
+	uint64_t result, product;
+	char c;
+	int series[1000];
 
 	FILE *fp;
 
@@ -273,34 +274,40 @@ void largest_product_in_a_series() {
 		printf("%s\n", "");
 
 	/* initilise */
-	result = 0;
-
-	printf("%s\n", "Testing file access... ");
-
-	char cCurrentPath[FILENAME_MAX];
-
- 	if (!GetCurrentDir(cCurrentPath, sizeof(cCurrentPath)))
-     	printf("%s\n", "Error!");
-
-     cCurrentPath[sizeof(cCurrentPath) - 1] = '\0'; /* not really required */
-
-	printf ("The current working directory is %s", cCurrentPath);
+	start = 0;
+	i = 0;
+	end = 12;
+	
+	result = 0LLU;
+	product = 0LLU;
 
 	fp = fopen("E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt", "r");
 
 	if (fp == NULL) {
-		printf("%s\n", "pointer is null");
+		printf("%s\n", "File pointer is null");
 	} else {
-		printf("%s", "Pointer is not null, first char:");		
-		printf("%c\n", getc(fp));
 
-		series[0] = getc(fp);
-		printf("%s", "Pointer is not null, second char via series[]:");
-		printf("%c\n", series[0]);
+		while ((c = getc(fp)) != EOF)
+			series[i++] = c - '0';
+
+		while (end != 1000) {
+
+			product = 1;
+
+			for (i = start; i <= end; i++) {
+				product *= series[i];
+			}
+
+			if (product > result)
+				result = product;
+
+			start++;
+			end++;
+		}
 	}
 
 	/* print result */
-	printf("%s%d\n", "Largest product in this series is: ", result);
-	/*printf("%s\n", "Confirmed correct on Project Euler.");*/
+	printf("%s%llu\n", "Largest product in this series is: ", result);
+	printf("%s\n", "Confirmed correct on Project Euler.");
 	printf("%s\n", "");
 }
