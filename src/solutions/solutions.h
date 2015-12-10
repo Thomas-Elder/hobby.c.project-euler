@@ -9,7 +9,7 @@
 /* definitions */
 
 /* prototypes */
-void multiples_3_and_5();
+int multiples_3_and_5();
 void even_fibonacci_numbers();
 void largest_prime_factor();
 void largest_palindrome_product();

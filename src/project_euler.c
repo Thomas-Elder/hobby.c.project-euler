@@ -48,7 +48,7 @@ void solutions(int menuChoice) {
 
 	switch (menuChoice) {
 		case 1:
-			multiples_3_and_5();
+			problem_1();
 			break;
 		case 2:
 			even_fibonacci_numbers();
@@ -75,4 +75,45 @@ void solutions(int menuChoice) {
 			printf("%s\n", "Solution not yet implemented.");
 			break;
 	}
+}
+
+void problem_1() {
+	
+	/* print title and problem */
+	printf("%s\n", "Multiples of 3 and 5");
+	printf("%s\n", "If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.");
+	printf("\n");
+
+	/* print result */
+	printf("%s%d\n", "The sum of multiples of 3 and 5 under 1000 is: ", multiples_3_and_5());
+	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("\n");
+}
+
+void problem_2() {
+	
+}
+
+void problem_3() {
+	
+}
+
+void problem_4() {
+	
+}
+
+void problem_5() {
+	
+}
+
+void problem_6() {
+	
+}
+
+void problem_7() {
+	
+}
+
+void problem_8() {
+	
 }
