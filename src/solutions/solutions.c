@@ -12,10 +12,7 @@ int sum_multiples(int a, int b, int limit) {
 	/* initilise */
 	sum = 0;
 
-	printf("Value of a: %d\n", a);
-	printf("Value of b: %d\n", b);
-	printf("Value of limit: %d\n", limit);
-
+	/* */
 	for (i = 1; i < limit; i++) {
 		if (i % a == 0 || i % b == 0) {
 			sum += i;
@@ -25,6 +22,9 @@ int sum_multiples(int a, int b, int limit) {
 	return sum;
 }
 
+/*
+ *
+ */
 void even_fibonacci_numbers() {
 
 	/* local variables */
@@ -58,6 +58,9 @@ void even_fibonacci_numbers() {
 	printf("%s\n", "");
 }
 
+/*
+ *
+ */
 void largest_prime_factor() {
 
 	/* local variables */
@@ -104,6 +107,9 @@ void largest_prime_factor() {
 	printf("%s\n", "");
 }
 
+/*
+ *
+ */
 void largest_palindrome_product() {
 
 	/* local variables */
@@ -135,6 +141,9 @@ void largest_palindrome_product() {
 	printf("%s\n", "");
 }	
 
+/*
+ *
+ */
 void smallest_multiple() {
 
 	/* local variables */
@@ -175,6 +184,9 @@ void smallest_multiple() {
 	printf("%s\n", "");
 }
 
+/*
+ *
+ */
 void sum_square_difference() {
 
 	/* local variables */
@@ -216,6 +228,9 @@ void sum_square_difference() {
 	printf("%s\n", "");
 }
 
+/*
+ *
+ */
 void ten_thousand_and_first_prime() {
 
 	/* local variables */
@@ -254,6 +269,9 @@ void ten_thousand_and_first_prime() {
 
 }
 
+/*
+ *
+ */
 void largest_product_in_a_series() {
 
 	/* local variables */

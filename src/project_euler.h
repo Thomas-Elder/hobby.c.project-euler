@@ -14,8 +14,6 @@
 #include "utility\stack.h"
 
 /* definitions */
-#define MAXINT 2
-#define MAXBIGINT 255
 
 /* prototypes */
 void solutions(int menuChoice);
