@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -pedantic -Wundef -std=c99
 
 # rebuildables
 EXE = project_euler.exe
-OBJ = project_euler.o solutions.o utility.o file.o
+OBJ = project_euler.o solutions.o utility.o
 
 TARGET = $(addprefix bin\,$(EXE))
 OBJECTS = $(addprefix obj\,$(OBJ))
