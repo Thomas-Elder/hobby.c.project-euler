@@ -32,7 +32,7 @@ int main(void) {
 		printf("%s\n", "12 - Highly divisible triangular number");
 		printf("%s\n", "0 - Exit");
 
-		get_int(&input);
+		get_input(&input);
 
 		solutions(input);
 	}
@@ -93,7 +93,7 @@ void problem_1() {
 	printf("\n");
 
 	printf("%s", "If you would like to see the Project Euler solution, press 0, press 1 to enter your own: ");
-	get_int(&input);
+	get_input(&input);
 	printf("\n");
 
 	if (input == 0) {
@@ -102,13 +102,13 @@ void problem_1() {
 		limit = 1000;
 	} else {
 		printf("%s", "Enter first number to sum: ");
-		get_big_int(&a);
+		get_input(&a);
 
 		printf("%s", "Enter second number to sum: ");
-		get_big_int(&b);
+		get_input(&b);
 
 		printf("%s", "Enter limit for multiples: ");
-		get_big_int(&limit);
+		get_input(&limit);
 	}
 
 	/* print result */
