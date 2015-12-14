@@ -41,6 +41,15 @@ int main(void)
 }
 
 int test_problem_1(void) {
+
+	int expected;
+
+	expected = 233168;
+
+	if (sum_multiples(3, 5, 1000) != expected) {
+		return 1;
+	}
+
 	return 0;
 }
 

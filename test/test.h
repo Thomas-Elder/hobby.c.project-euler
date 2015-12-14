@@ -5,7 +5,6 @@
 
 /* includes */
 #include "..\src\utility\stack.h"
-#include "..\src\utility\file.h"
 #include "..\src\utility\utility.h"
 #include "..\src\solutions\solutions.h"
 #include "..\src\project_euler.h"
