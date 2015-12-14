@@ -51,17 +51,13 @@ int even_fibonacci_numbers(int limit) {
 /*
  *
  */
-void largest_prime_factor() {
+int largest_prime_factor() {
 
 	/* local variables */
 	long long int number;
 	int factor, limit, i;
 	double square_root;
 
-	/* print title and problem */
-	printf("%s\n", "Largest Prime factor");
-	printf("%s\n%s\n", "The prime factors of 13195 are 5, 7, 13 and 29.",
-		"What is the largest prime factor of the number 600851475143?");
 
 	/* initilise */
 	number = 600851475143LL;
@@ -91,26 +87,16 @@ void largest_prime_factor() {
 		}
 	}
 
-	/* print result */
-	printf("%s%d\n", "The largest prime factor of 600851475143 is:", factor);
-	printf("%s\n", "Confirmed correct on Project Euler.");
-	printf("%s\n", "");
+	return factor;
 }
 
 /*
  *
  */
-void largest_palindrome_product() {
+int largest_palindrome_product() {
 
 	/* local variables */
 	int i, j, result;
-
-	/* print title and problem */
-	printf("%s\n", "Largest palindrome product");
-	printf("%s\n%s\n%s\n", "A palindromic number reads the same both ways.",
-		"The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 * 99.",
-		"Find the largest palindrome made from the product of two 3-digit numbers.");
-	printf("%s\n", "");
 
 	/* initilise */
 	result = 0;
@@ -125,10 +111,7 @@ void largest_palindrome_product() {
 		}
 	}
 
-	/* print result */
-	printf("%s%d\n", "The largest palimdromic product of two 3 digit numbers is: ", result);
-	printf("%s\n", "Confirmed correct on Project Euler.");
-	printf("%s\n", "");
+	return result;
 }	
 
 /*

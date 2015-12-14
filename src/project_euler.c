@@ -26,10 +26,10 @@ int main(void) {
 		printf("%s\n", "6 - Sum square difference");
 		printf("%s\n", "7 - 10001st prime");
 		printf("%s\n", "8 - Largest product in a series");
-		printf("%s\n", "9 - Special Pythagorean triplet");
+		/*printf("%s\n", "9 - Special Pythagorean triplet");
 		printf("%s\n", "10 - Summation of primes");
 		printf("%s\n", "11 - Largest product in a grid");
-		printf("%s\n", "12 - Highly divisible triangular number");
+		printf("%s\n", "12 - Highly divisible triangular number");*/
 		printf("%s\n", "0 - Exit");
 
 		get_input(&input);
@@ -50,22 +50,22 @@ void solutions(int menuChoice) {
 			problem_2();
 			break;
 		case 3:
-			largest_prime_factor();
+			problem_3();
 			break;
 		case 4:
-			largest_palindrome_product();
+			problem_4();
 			break;
 		case 5:
-			smallest_multiple();
+			problem_5();
 			break;
 		case 6:
-			sum_square_difference();
+			problem_6();
 			break;
 		case 7:
-			ten_thousand_and_first_prime();
+			problem_7();
 			break;
 		case 8:
-			largest_product_in_a_series();
+			problem_8();
 			break;
 		case 0:
 			break;	
@@ -152,11 +152,31 @@ void problem_2() {
 }
 
 void problem_3() {
-	
+
+	/* print title and problem */
+	printf("%s\n", "Largest Prime factor");
+	printf("%s\n%s\n", "The prime factors of 13195 are 5, 7, 13 and 29.",
+		"What is the largest prime factor of the number 600851475143?");
+		
+		/* print result */
+	printf("%s%d\n", "The largest prime factor of 600851475143 is:", largest_prime_factor());
+	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("%s\n", "");	
 }
 
 void problem_4() {
-	
+
+	/* print title and problem */
+	printf("%s\n", "Largest palindrome product");
+	printf("%s\n%s\n%s\n", "A palindromic number reads the same both ways.",
+		"The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 * 99.",
+		"Find the largest palindrome made from the product of two 3-digit numbers.");
+	printf("%s\n", "");
+
+	/* print result */
+	printf("%s%d\n", "The largest palimdromic product of two 3 digit numbers is: ", largest_palindrome_product());
+	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("%s\n", "");
 }
 
 void problem_5() {
