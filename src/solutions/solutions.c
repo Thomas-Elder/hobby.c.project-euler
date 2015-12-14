@@ -51,16 +51,14 @@ int even_fibonacci_numbers(int limit) {
 /*
  *
  */
-int largest_prime_factor() {
+int largest_prime_factor(long long int number) {
 
 	/* local variables */
-	long long int number;
 	int factor, limit, i;
 	double square_root;
 
 
 	/* initilise */
-	number = 600851475143LL;
 
 	/* Ok first off, let's find the square root of the number.
 	 * The floor of this will be the highest factor we need to check

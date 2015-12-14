@@ -127,3 +127,22 @@ void get_input(int *input) {
 
 	*input = atoi(buffer);
 }
+
+/* get_input
+ * Reads chars from stdin until newline char is entered, at which point 
+ * it attempts to convert the chars entered to an int and saves it to the 
+ * the pointer passed.
+ */
+void get_input_ll(long long int *input) {
+
+	/* local variables */
+	int i, c;
+	char buffer[256];
+
+	i = 0;
+
+	while ((c = getc(stdin)) != '\n')
+		buffer[i++] = c;
+
+	*input = atoi(buffer);
+}

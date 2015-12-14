@@ -26,8 +26,11 @@ void working_directory(char *c);
 bool is_prime(int value);
 bool is_palindrome(int value);
 int reverse_int(int value);
+
+void get_input(int *input);
+void get_input_ll(long long int *input);
+
 void read_rest_of_line(void);
 void print_directory(void);
-void get_input(int *input);
 
 #endif

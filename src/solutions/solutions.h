@@ -11,7 +11,7 @@
 /* prototypes */
 int sum_multiples(int a, int b, int limit);
 int even_fibonacci_numbers(int limit);
-int largest_prime_factor();
+int largest_prime_factor(long long int number);
 int largest_palindrome_product();
 void smallest_multiple();
 void sum_square_difference();

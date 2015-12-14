@@ -153,13 +153,28 @@ void problem_2() {
 
 void problem_3() {
 
+	/* local variables */
+	int input;
+	long long int limit;
+
 	/* print title and problem */
 	printf("%s\n", "Largest Prime factor");
 	printf("%s\n%s\n", "The prime factors of 13195 are 5, 7, 13 and 29.",
 		"What is the largest prime factor of the number 600851475143?");
-		
-		/* print result */
-	printf("%s%d\n", "The largest prime factor of 600851475143 is:", largest_prime_factor());
+	
+	printf("%s", "If you would like to see the Project Euler solution, press 0, press 1 to enter your own: ");
+	get_input(&input);
+	printf("\n");
+
+	if (input == 0) {
+		limit = 600851475143;
+	} else {
+		printf("%s", "Enter the number you'd like to know the largest prime factor of: ");
+		get_input_ll(&limit);
+	}
+
+	/* print result */
+	printf("%s%d\n", "The largest prime factor of 600851475143 is:", largest_prime_factor(limit));
 	printf("%s\n", "Confirmed correct on Project Euler.");
 	printf("%s\n", "");	
 }
