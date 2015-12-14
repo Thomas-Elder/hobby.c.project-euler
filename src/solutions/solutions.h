@@ -10,7 +10,7 @@
 
 /* prototypes */
 int sum_multiples(int a, int b, int limit);
-void even_fibonacci_numbers();
+int even_fibonacci_numbers(int limit);
 void largest_prime_factor();
 void largest_palindrome_product();
 void smallest_multiple();
