@@ -1,5 +1,5 @@
 *.exe
 *.o
 *.sublime-workspace
-doc\html\
-doc\latex\
+doc/html/
+doc/latex/
