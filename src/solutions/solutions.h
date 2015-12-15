@@ -9,7 +9,22 @@
 /* definitions */
 
 /* prototypes */
+
+/* sum_multiples
+ *
+ * PARAMETERS : int a
+ *              int b
+ *              int limit  
+ *
+ * PURPOSE    : take two numbers and a limit. Sums all the multiples of those 
+ *              numbers which are no greater than the limit.
+ *
+ * RETURNs    : returns the sum of those multiples
+ *
+ * NOTES      :
+ */
 int sum_multiples(int a, int b, int limit);
+
 int even_fibonacci_numbers(int limit);
 int largest_prime_factor(long long int number);
 int largest_palindrome_product();
