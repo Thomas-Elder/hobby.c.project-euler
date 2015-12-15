@@ -22,6 +22,13 @@
 #endif
 
 /* prototypes */
+
+/**
+ * \breif Gets the working directory. 
+ * \fn void working_directory(char *c)
+ *
+ * \param c char *
+ */
 void working_directory(char *c);
 bool is_prime(int value);
 bool is_palindrome(int value);

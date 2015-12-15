@@ -10,11 +10,13 @@
 
 /* prototypes */
 
-/* sum_multiples
+/** 
+ * \fn int sum_multiples(int a, int b, int limit)
+ * \brief sums multiples of two integers smaller than some limit.
  *
- * PARAMETERS : int a
- *              int b
- *              int limit  
+ * \param a an integer
+ * \param b an integer
+ * \param limit an integer  
  *
  * PURPOSE    : take two numbers and a limit. Sums all the multiples of those 
  *              numbers which are no greater than the limit.
