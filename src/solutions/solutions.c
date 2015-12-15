@@ -3,6 +3,7 @@
 #include "solutions.h"
 
 /* sum_multiples
+ * 
  */
 int sum_multiples(int a, int b, int limit) {
 
@@ -22,7 +23,7 @@ int sum_multiples(int a, int b, int limit) {
 	return sum;
 }
 
-/*
+/* even_fibonacci_numbers
  *
  */
 int even_fibonacci_numbers(int limit) {
@@ -48,7 +49,7 @@ int even_fibonacci_numbers(int limit) {
 	return sum;
 }
 
-/*
+/* largest_prime_factor
  *
  */
 int largest_prime_factor(long long int number) {
@@ -88,7 +89,7 @@ int largest_prime_factor(long long int number) {
 	return factor;
 }
 
-/*
+/* largest_palindrome_product
  *
  */
 int largest_palindrome_product() {
@@ -112,7 +113,7 @@ int largest_palindrome_product() {
 	return result;
 }	
 
-/*
+/* smallest_multiple
  *
  */
 void smallest_multiple() {
@@ -155,7 +156,7 @@ void smallest_multiple() {
 	printf("%s\n", "");
 }
 
-/*
+/* sum_square_difference
  *
  */
 void sum_square_difference() {
@@ -199,7 +200,7 @@ void sum_square_difference() {
 	printf("%s\n", "");
 }
 
-/*
+/* ten_thousand_and_first_prime
  *
  */
 void ten_thousand_and_first_prime() {
@@ -240,7 +241,7 @@ void ten_thousand_and_first_prime() {
 
 }
 
-/*
+/* largest_product_in_a_series
  *
  */
 void largest_product_in_a_series() {
