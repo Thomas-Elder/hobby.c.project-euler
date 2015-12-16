@@ -146,7 +146,7 @@ void problem_2() {
 	}
 
 	/* print result */
-	printf("The sum of even Fibonacci numbers under %d is: %d\n", limit, even_fibonacci_numbers(limit));
+	printf("The sum of even Fibonacci numbers under %d is: %d\n", limit, sum_even_fibonacci_numbers(limit));
 	printf("%s\n", "Confirmed correct on Project Euler.");
 	printf("\n");
 }

@@ -26,7 +26,7 @@ int sum_multiples(int a, int b, int limit) {
 /* even_fibonacci_numbers
  *
  */
-int even_fibonacci_numbers(int limit) {
+int sum_even_fibonacci_numbers(int limit) {
 
 	/* local variables */
 	int curr, prev, pprev, sum;

@@ -38,7 +38,7 @@ int sum_multiples(int a, int b, int limit);
  *
  * NOTES      :
  */
-int even_fibonacci_numbers(int limit);
+int sum_even_fibonacci_numbers(int limit);
 
 /* largest_prime_factor
  *
