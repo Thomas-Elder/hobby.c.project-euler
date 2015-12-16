@@ -116,104 +116,61 @@ int largest_palindrome_product() {
 /* smallest_multiple
  *
  */
-void smallest_multiple() {
+int smallest_multiple(int low, int high) {
 
 	/* local variables */
 	int i, j, result;
-
-	/* print title and problem */
-	printf("%s\n", "Smallest multiple");
-	printf("%s\n%s\n", "2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.",
-		"What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?");
-	printf("%s\n", "");
 
 	/* initilise */
 	result = 0;
 
 	for (i = 2520; i < 2147483647; i+=2520) {
-		for (j = 20; j > 10; j--) {
+		for (j = high; j > low; j--) {
 			if (i % j != 0)	{
 				break;
 			}
 		}
 
-		printf("%s%d\n", "i = ", i);
-		printf("%s%d\n", "j = ", j);
-		printf("%s%d\n", "result = ", result);
-
-		if (j == 10) {
-
-			printf("%s%d\n", "result: ", i);
-
+		if (j == low) {
 			result = i;
 			break;
 		}
 	}
 
-	/* print result */
-	printf("%s%d\n", "The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is: ", result);
-	printf("%s\n", "Confirmed correct on Project Euler.");
-	printf("%s\n", "");
+	return result;
 }
 
 /* sum_square_difference
  *
  */
-void sum_square_difference() {
+int sum_square_difference(int limit) {
 
 	/* local variables */
-	int i, n, sumsquare, squaresum, result;
-
-	/* print title and problem */
-	printf("%s\n", "Sum square difference");
-	printf("%s\n%s\n\n%s\n%s\n\n%s\n%s", 
-		"The sum of the squares of the first ten natural numbers is,",
-		"1^2 + 2^2 + ... + 10^2 = 385",
-		"The square of the sum of the first ten natural numbers is,",
-		"(1 + 2 + ... + 10)^2 = 55^2 = 3025",
-		"Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 - 385 = 2640.",
-		"Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.");
-	printf("%s\n", "");
+	int i, sumsquare, squaresum;
 
 	/* initilise */
-	n = 100;
 	sumsquare = 0;
 	squaresum = 0;
-	result = 0;
 
 	/* go */
-	for (i = 1; i <= n; i++) {
+	for (i = 1; i <= limit; i++) {
 		sumsquare += i*i;
 		squaresum += i;
 	}
 	
 	squaresum = squaresum*squaresum;
 
-	printf("%s%d\n", "Sum of the squares is: ", sumsquare);
-	printf("%s%d\n", "Square of the sum is: ", squaresum);
-
-	result = squaresum - sumsquare;
-
-	/* print result */
-	printf("%s%d\n", "The difference between the sum of the squares and the square of the sum of the first one hundred natural numbers is: ", result);
-	printf("%s\n", "Confirmed correct on Project Euler.");
-	printf("%s\n", "");
+	return squaresum - sumsquare;
 }
 
 /* ten_thousand_and_first_prime
  *
  */
-void ten_thousand_and_first_prime() {
+int ten_thousand_and_first_prime(int n) {
 
 	/* local variables */
 	int i, count, result;
 
-	/* print title and problem */
-	printf("%s\n", "10001st prime");
-	printf("%s\n%s\n", 
-		"By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.",
-		"What is the 10 001st prime number?");
-		printf("%s\n", "");
 
 	/* initilise */
 	count = 1;
@@ -221,8 +178,9 @@ void ten_thousand_and_first_prime() {
 	i = 2;
 
 	/* go */
-	while (count != 10002) {
+	while (count != n + 1) {
 
+		/* weeding out even numbers */
 		if (i > 2 && i % 2 == 0) {
 		} else {
 			if (is_prime(i)) {
@@ -234,17 +192,13 @@ void ten_thousand_and_first_prime() {
 		i++;
 	}
 
-	/* print result */
-	printf("%s%d\n", "the 10 001st prime number is: ", result);
-	printf("%s\n", "Confirmed correct on Project Euler.");
-	printf("%s\n", "");
-
+	return result;
 }
 
 /* largest_product_in_a_series
  *
  */
-void largest_product_in_a_series() {
+long long int largest_product_in_a_series(char *filepath, int product_count) {
 
 	/* local variables */
 	int start, end, i;
@@ -254,27 +208,21 @@ void largest_product_in_a_series() {
 
 	FILE *fp;
 
-	/* print title and problem */
-	printf("%s\n", "Largest product in a series");
-	printf("%s\n%s\n", 
-		"The four adjacent digits in the 1000-digit number that have the greatest product are 9 - 9 - 8 - 9 = 5832.",
-		"Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?");
-		printf("%s\n", "");
-
 	/* initilise */
 	start = 0;
 	i = 0;
-	end = 12;
+	end = product_count - 1;
 	
 	result = 0LLU;
 	product = 0LLU;
 
-	fp = fopen("E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt", "r");
+	fp = fopen(filepath, "r");
 
 	if (fp == NULL) {
 		printf("%s\n", "File pointer is null");
 	} else {
 
+		/* Read chars from file and convert to ints */
 		while ((c = getc(fp)) != EOF)
 			series[i++] = c - '0';
 
@@ -294,8 +242,5 @@ void largest_product_in_a_series() {
 		}
 	}
 
-	/* print result */
-	printf("%s%llu\n", "Largest product in this series is: ", result);
-	printf("%s\n", "Confirmed correct on Project Euler.");
-	printf("%s\n", "");
+	return result;
 }

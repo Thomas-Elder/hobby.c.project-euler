@@ -54,7 +54,7 @@ int largest_prime_factor(long long int number);
 
 /* largest_palindrome_product
  *
- * PARAMETERS : 
+ * PARAMETERS : long long int number
  *
  * PURPOSE    : 
  *
@@ -66,7 +66,8 @@ int largest_palindrome_product();
 
 /* smallest_multiple
  *
- * PARAMETERS : 
+ * PARAMETERS : int low 
+ *              int high
  *
  * PURPOSE    : 
  *
@@ -74,11 +75,11 @@ int largest_palindrome_product();
  *
  * NOTES      :
  */
-void smallest_multiple();
+int smallest_multiple(int low, int high);
 
 /* sum_square_difference
  *
- * PARAMETERS :
+ * PARAMETERS : int limit
  *
  * PURPOSE    :
  *
@@ -86,11 +87,11 @@ void smallest_multiple();
  *
  * NOTES      :
  */
-void sum_square_difference();
+int sum_square_difference(int limit);
 
 /* ten_thousand_and_first_prime
  *
- * PARAMETERS :
+ * PARAMETERS : int n
  *
  * PURPOSE    :
  *
@@ -98,18 +99,19 @@ void sum_square_difference();
  *
  * NOTES      :
  */
-void ten_thousand_and_first_prime();
+int ten_thousand_and_first_prime(int n);
 
 /* largest_product_in_a_series
  *
- * PARAMETERS : 
+ * PARAMETERS : char *filepath
+ *              int product_count
  *
  * PURPOSE    :
  *
- * RETURNs    :
+ * RETURNs    : long long int
  *
  * NOTES      :
  */
-void largest_product_in_a_series();
+long long int largest_product_in_a_series(char *filepath, int product_count);
 
 #endif

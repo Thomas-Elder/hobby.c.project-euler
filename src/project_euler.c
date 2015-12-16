@@ -7,7 +7,7 @@ int main(void) {
 	/* local variables */
 	int input;
 
-	printf("%s\n", "");
+	printf("\n");
 	printf("%s\n", "Welcome to Tom's Project Euler solutions!");
 	print_directory();
 
@@ -16,7 +16,7 @@ int main(void) {
 	while (input != 0){
 
 		/* menu */
-		printf("%s\n", "");
+		printf("\n");
 		printf("%s\n", "Please select from the following solutions:");
 		printf("%s\n", "1 - Multiples of 3 and 5");
 		printf("%s\n", "2 - Even Fibonacci numbers");
@@ -148,7 +148,7 @@ void problem_2() {
 	/* print result */
 	printf("The sum of even Fibonacci numbers under %d is: %d\n", limit, even_fibonacci_numbers(limit));
 	printf("%s\n", "Confirmed correct on Project Euler.");
-	printf("%s\n", "");
+	printf("\n");
 }
 
 void problem_3() {
@@ -176,36 +176,88 @@ void problem_3() {
 	/* print result */
 	printf("%s%d\n", "The largest prime factor of 600851475143 is:", largest_prime_factor(limit));
 	printf("%s\n", "Confirmed correct on Project Euler.");
-	printf("%s\n", "");	
+	printf("\n");	
 }
 
 void problem_4() {
 
 	/* print title and problem */
 	printf("%s\n", "Largest palindrome product");
-	printf("%s\n%s\n%s\n", "A palindromic number reads the same both ways.",
-		"The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 * 99.",
-		"Find the largest palindrome made from the product of two 3-digit numbers.");
-	printf("%s\n", "");
+	printf("%s\n%s%s\n%s%s\n", "A palindromic number reads the same both ways.",
+		"The largest palindrome made from the product of two 2-digit numbers",
+		" is 9009 = 91 * 99.",
+		"Find the largest palindrome made from the product of two 3-digit",
+		" numbers.");
+	printf("\n");
 
 	/* print result */
 	printf("%s%d\n", "The largest palimdromic product of two 3 digit numbers is: ", largest_palindrome_product(10, 20));
 	printf("%s\n", "Confirmed correct on Project Euler.");
-	printf("%s\n", "");
+	printf("\n");
 }
 
 void problem_5() {
-	
+
+	/* print title and problem */
+	printf("%s\n", "Smallest multiple");
+	printf("%s\n%s\n", "2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.",
+		"What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?");
+	printf("\n");
+
+	/* print result */
+	printf("%s%d\n", "The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is: ", smallest_multiple(10, 20));
+	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("\n");
 }
 
 void problem_6() {
-	
+
+	/* print title and problem */
+	printf("%s\n", "Sum square difference");
+	printf("%s\n%s\n\n%s\n%s\n\n%s\n%s", 
+		"The sum of the squares of the first ten natural numbers is,",
+		"1^2 + 2^2 + ... + 10^2 = 385",
+		"The square of the sum of the first ten natural numbers is,",
+		"(1 + 2 + ... + 10)^2 = 55^2 = 3025",
+		"Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 - 385 = 2640.",
+		"Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.");
+	printf("\n");
+
+	/* print result */
+	printf("%s%d\n", "The difference between the sum of the squares and the square of the sum of the first one hundred natural numbers is: ", sum_square_difference(100));
+	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("\n");	
 }
 
 void problem_7() {
 	
+	/* print title and problem */
+	printf("%s\n", "10001st prime");
+	printf("%s\n%s\n", 
+		"By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.",
+		"What is the 10 001st prime number?");
+		printf("\n");
+
+	/* print result */
+	printf("%s%d\n", "the 10 001st prime number is: ", ten_thousand_and_first_prime(10001));
+	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("\n");
 }
 
 void problem_8() {
-	
+
+	/* local variables */
+	char *filepath = "E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt";
+
+	/* print title and problem */
+	printf("%s\n", "Largest product in a series");
+	printf("%s\n%s\n", 
+		"The four adjacent digits in the 1000-digit number that have the greatest product are 9 - 9 - 8 - 9 = 5832.",
+		"Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?");
+		printf("\n");
+
+	/* print result */
+	printf("%s%llu\n", "Largest product in this series is: ", largest_product_in_a_series(filepath, 13));
+	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("\n");	
 }
