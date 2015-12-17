@@ -99,7 +99,7 @@ int sum_square_difference(int limit);
  *
  * NOTES      :
  */
-int ten_thousand_and_first_prime(int n);
+int nth_prime(int n);
 
 /* largest_product_in_a_series
  *

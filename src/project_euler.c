@@ -239,7 +239,7 @@ void problem_7() {
 		printf("\n");
 
 	/* print result */
-	printf("%s%d\n", "the 10 001st prime number is: ", ten_thousand_and_first_prime(10001));
+	printf("%s%d\n", "the 10 001st prime number is: ", nth_prime(10001));
 	printf("%s\n", "Confirmed correct on Project Euler.");
 	printf("\n");
 }

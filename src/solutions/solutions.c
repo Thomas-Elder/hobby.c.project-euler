@@ -166,7 +166,7 @@ int sum_square_difference(int limit) {
 /* ten_thousand_and_first_prime
  *
  */
-int ten_thousand_and_first_prime(int n) {
+int nth_prime(int n) {
 
 	/* local variables */
 	int i, count, result;
