@@ -14,7 +14,13 @@
 #include <stdlib.h>
 
 /* prototypes */
-int test_problem_1(void);
-int test_problem_2(void);
+int test_sum_multiples(void);
+int test_sum_even_fibonacci_numbers(void);
+int test_largest_prime_factor(void);
+int test_largest_palindrome_product(void);
+int test_smallest_multiple(void);
+int test_sum_square_difference(void);
+int test_nth_prime(void);
+int test_largest_product_in_a_series(void);
 
 #endif
