@@ -27,6 +27,12 @@ int main(void)
 
 	results[0] = test_sum_multiples();
 	results[1] = test_sum_even_fibonacci_numbers();
+	results[2] = test_largest_prime_factor();
+	results[3] = test_largest_palindrome_product();
+	results[4] = test_smallest_multiple();
+	results[5] = test_sum_square_difference();
+	results[6] = test_nth_prime();
+	results[7] = test_largest_product_in_a_series();
 
 	printf("\n");
 	for (i = 0; i < 8; i++) {
@@ -113,11 +119,11 @@ int test_largest_palindrome_product(void) {
 	/* arrange */
 	int expected, result;
 
-	expected = 0;
+	expected = 906609;
 	result = 0;
 
 	/* act */ 
-	result = 0;
+	result = largest_palindrome_product();
 
 	/* assert */
 	if (expected == result)
@@ -134,11 +140,11 @@ int test_smallest_multiple(void) {
 	/* arrange */
 	int expected, result;
 
-	expected = 0;
+	expected = 232792560;
 	result = 0;
 
 	/* act */ 
-	result = 0;
+	result = smallest_multiple(10, 20);
 
 	/* assert */
 	if (expected == result)
@@ -155,11 +161,11 @@ int test_sum_square_difference(void) {
 	/* arrange */
 	int expected, result;
 
-	expected = 0;
+	expected = 25164150;
 	result = 0;
 
 	/* act */ 
-	result = 0;
+	result = sum_square_difference(100);
 
 	/* assert */
 	if (expected == result)
@@ -176,11 +182,11 @@ int test_nth_prime(void) {
 	/* arrange */
 	int expected, result;
 
-	expected = 0;
+	expected = 104743;
 	result = 0;
 
 	/* act */ 
-	result = 0;
+	result = nth_prime(10001);
 
 	/* assert */
 	if (expected == result)
@@ -195,13 +201,15 @@ int test_nth_prime(void) {
 int test_largest_product_in_a_series(void) {
 
 	/* arrange */
-	int expected, result;
+	long long int expected, result;
 
-	expected = 0;
-	result = 0;
+	char *filepath = "E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt";
+
+	expected = 23514624000;
+	result = 0LLU;
 
 	/* act */ 
-	result = 0;
+	result = largest_product_in_a_series(filepath, 13);
 
 	/* assert */
 	if (expected == result)

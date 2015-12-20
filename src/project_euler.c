@@ -191,7 +191,7 @@ void problem_4() {
 	printf("\n");
 
 	/* print result */
-	printf("%s%d\n", "The largest palimdromic product of two 3 digit numbers is: ", largest_palindrome_product(10, 20));
+	printf("%s%d\n", "The largest palimdromic product of two 3 digit numbers is: ", largest_palindrome_product());
 	printf("%s\n", "Confirmed correct on Project Euler.");
 	printf("\n");
 }

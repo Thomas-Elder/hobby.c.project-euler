@@ -54,7 +54,7 @@ int largest_prime_factor(long long int number);
 
 /* largest_palindrome_product
  *
- * PARAMETERS : long long int number
+ * PARAMETERS : 
  *
  * PURPOSE    : 
  *
