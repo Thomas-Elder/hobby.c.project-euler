@@ -91,7 +91,7 @@ int test_largest_prime_factor(void) {
 	/* arrange */
 	long long int expected, result, limit;
 
-	expected = 0;
+	expected = 6857;
 	result = 0;
 	limit = 600851475143;
 
