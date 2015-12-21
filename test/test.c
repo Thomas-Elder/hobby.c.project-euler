@@ -62,10 +62,10 @@ int test_sum_multiples(void) {
 	result = sum_multiples(3, 5, 1000);
 
 	/* assert */
-	if (expected == result)
-		return 0;
+	if (expected != result)
+		return 1;
 
-	return 1;
+	return 0;
 }
 
 /**
@@ -84,10 +84,10 @@ int test_sum_even_fibonacci_numbers(void) {
 	result = sum_even_fibonacci_numbers(limit);
 
 	/* assert */
-	if (expected == result)
-		return 0;
+	if (expected != result)
+		return 1;
 
-	return 1;
+	return 0;
 }
 
 /**
@@ -106,10 +106,10 @@ int test_largest_prime_factor(void) {
 	result = largest_prime_factor(limit);
 
 	/* assert */
-	if (expected == result)
-		return 0;
+	if (expected != result)
+		return 1;
 
-	return 1;
+	return 0;
 }
 
 /**
@@ -127,10 +127,10 @@ int test_largest_palindrome_product(void) {
 	result = largest_palindrome_product();
 
 	/* assert */
-	if (expected == result)
-		return 0;
+	if (expected != result)
+		return 1;
 
-	return 1;
+	return 0;
 }
 
 /**
@@ -148,10 +148,10 @@ int test_smallest_multiple(void) {
 	result = smallest_multiple(10, 20);
 
 	/* assert */
-	if (expected == result)
-		return 0;
+	if (expected != result)
+		return 1;
 
-	return 1;
+	return 0;
 }
 
 /**
@@ -169,10 +169,10 @@ int test_sum_square_difference(void) {
 	result = sum_square_difference(100);
 
 	/* assert */
-	if (expected == result)
-		return 0;
+	if (expected != result)
+		return 1;
 
-	return 1;
+	return 0;
 }
 
 /**
@@ -190,10 +190,10 @@ int test_nth_prime(void) {
 	result = nth_prime(10001);
 
 	/* assert */
-	if (expected == result)
-		return 0;
+	if (expected != result)
+		return 1;
 
-	return 1;
+	return 0;
 }
 
 /**
@@ -213,8 +213,8 @@ int test_largest_product_in_a_series(void) {
 	result = largest_product_in_a_series(filepath, 13);
 
 	/* assert */
-	if (expected == result)
-		return 0;
+	if (expected != result)
+		return 1;
 
-	return 1;
+	return 0;
 }
