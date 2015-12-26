@@ -6,7 +6,7 @@ int main(void)
 {
 	/* local variables */
 	int i;
-	int results[8];
+	int results[9];
 
 	for (i = 0; i < 8; i++)
 		results[i] = 1;
@@ -33,6 +33,7 @@ int main(void)
 	results[5] = test_sum_square_difference();
 	results[6] = test_nth_prime();
 	results[7] = test_largest_product_in_a_series();
+	results[8] = test_check_answer();
 
 	printf("\n");
 	for (i = 0; i < 8; i++) {
@@ -217,4 +218,15 @@ int test_largest_product_in_a_series(void) {
 		return 1;
 
 	return 0;
+}
+
+int test_check_answer(void) {
+
+	/* arrange */
+
+	/* act */ 
+
+	/* assert */
+
+	return 1;
 }
