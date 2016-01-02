@@ -9,7 +9,7 @@ int main(void) {
 
 	printf("\n");
 	printf("%s\n", "Welcome to Tom's Project Euler solutions!");
-	print_directory();
+	/*print_directory();*/
 
 	input = -1;
 
@@ -78,7 +78,7 @@ void solutions(int menuChoice) {
 void problem_1() {
 
 	/* local variables */
-	int a, b, limit, input;
+	int a, b, limit, input, result;
 	
 	a = 0;
 	b = 0;
@@ -111,14 +111,21 @@ void problem_1() {
 		get_input(&limit);
 	}
 
+	result = sum_multiples(a, b, limit);
+
 	/* print result */
 	printf("The sum of multiples of %d and %d under %d is %d.\n", 
 		a,
 		b, 
 		limit, 
-		sum_multiples(a, b, limit));
+		result);
 
+	if (check_answer(1, result) == 1) {
 	printf("%s\n", "Confirmed correct on Project Euler.");
+	} else {
+		printf("%s\n", "Answer is incorrect.");
+	}
+
 	printf("\n");
 }
 

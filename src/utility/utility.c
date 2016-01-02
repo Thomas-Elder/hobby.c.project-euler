@@ -146,3 +146,53 @@ void get_input_ll(long long int *input) {
 
 	*input = atoi(buffer);
 }
+
+int check_answer(int question, long long int answer) {
+
+	/* local variables */
+	FILE *fp;
+	char buffer[256];
+	char c;
+	int i, correct_answer;
+
+	fp = fopen(ANSWER_FILEPATH, "r");
+	i = 0;
+	correct_answer = 0;
+	c = '0';
+
+	if (fp == NULL) {
+
+		printf("%s\n", "File pointer is null");
+	} else {
+
+		while (c != EOF) {
+
+			c = getc(fp);
+
+			/**/
+			if (c - '0' == question) {
+
+				/* move the pointer passed the point, and space */
+				while ((c = getc(fp)) != '.');
+				getc(fp);
+
+				/* read into the buffer the rest of the line */
+				while ((c = getc(fp)) != '\n')
+					buffer[i++] = c;
+
+				/* terminate the string */
+				buffer[i] = '\0';
+
+				correct_answer = atoi(buffer);
+
+				if (answer == correct_answer) {
+					return 1;
+				}
+
+				break;
+			}
+		}
+	}
+
+	return 0;
+}

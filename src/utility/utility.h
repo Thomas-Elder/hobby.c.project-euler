@@ -11,6 +11,7 @@
 #include <string.h>
 
 /* definitions */
+#define ANSWER_FILEPATH "E:\\c\\practice\\Project Euler\\doc\\project_euler_solutions.txt"
 
 /* For checking current working dir */
 #ifdef WINDOWS
@@ -39,5 +40,7 @@ void get_input_ll(long long int *input);
 
 void read_rest_of_line(void);
 void print_directory(void);
+
+int check_answer(int question, long long int answer);
 
 #endif
