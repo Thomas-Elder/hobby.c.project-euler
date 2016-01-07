@@ -120,7 +120,7 @@ void problem_1() {
 		limit, 
 		result);
 
-	if (check_answer(1, result) == 0) {
+	if (check_answer(1, result)) {
 	printf("%s\n", "Confirmed correct on Project Euler.");
 	} else {
 		printf("%s\n", "Answer is incorrect.");

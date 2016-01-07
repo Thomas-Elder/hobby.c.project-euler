@@ -62,7 +62,7 @@ int largest_prime_factor(long long int number) {
 	/* initilise */
 
 	/* Ok first off, let's find the square root of the number.
-	 * The floor of this will be the highest factor we need to check
+	 * The floor of this will be the highest factor we need to q
 	 * for primeness, as once we get above the square root we'll start 
 	 * repeating the smaller factors. */
 	square_root = sqrt(number);

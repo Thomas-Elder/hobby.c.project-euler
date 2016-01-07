@@ -131,12 +131,13 @@ void working_directory(char *c);
  * PARAMETERS : int question
  *              long long int answer
  *
- * RETURNS    : int
+ * RETURNS    : bool
  * 
- * PURPOSE    :
+ * PURPOSE    : To check if the answer parameter matches the answer read from
+ *              the solutions text file, for the question parameter.
  *
  * NOTES      :
  */
-int check_answer(int question, long long int answer);
+bool check_answer(int question, long long int answer);
 
 #endif

@@ -6,7 +6,26 @@
 
 /* is_prime
  * This function returns true if the number is prime, and 
- * false if it is not. 
+ * false if it is not.
+ * 
+ * This function first checks if the value is 2 or 3, to get prime numbers < 6
+ * out of the way.
+ *
+ * Then checks if the value is divisible by 2 or 3.
+ *
+ * Then as all prime numbers are of the form (6k +/- 1) we can step through 
+ * a loop of i from i = 5 up to sqrt(value), and check if i or i + 2 is
+ * a factor of the value.
+ *
+ * I initially found a solution involving this equation here:
+ * http://stackoverflow.com/questions/1538644/c-determine-if-a-number-is-prime
+ *
+ * Where the idea that every* integer can be expresses as (6k + i), for some k,
+ * and for some i equal to -1:3.
+ *
+ * More on this here:
+ * https://www.quora.com/Is-every-prime-number-other-than-2-and-3-of-the-form-6k%C2%B11
+ *
  */
 bool is_prime(int value) {
 
@@ -23,9 +42,9 @@ bool is_prime(int value) {
 	if (value % 2 == 0 || value % 3 == 0)
 		return false;
 
-	for (i = 5; i <= limit; i += 2) {
+	for (i = 5; i <= limit; i += 6) {
 
-		if (value % i == 0)
+		if (value % i == 0 || value % (i + 2) == 0)
 			return false;
 	}
 
@@ -33,9 +52,10 @@ bool is_prime(int value) {
 }
 
 /* is_palindromic
- * This function returns true if the number is a palindrome, ie 
- * it's digits in reverse order are the same.
- * Returns false if not.
+ *
+ * This function uses the reverse_int function to generate a digitally
+ * reversed version of the value passed. It then checks if they are
+ * equivalent and returns true if so.
  */
 bool is_palindrome(int value) {
 
@@ -51,8 +71,10 @@ bool is_palindrome(int value) {
 }
 
 /* reverse_int
- * This function returns an integer with digits in reverse order to 
- * the value passed. */
+ *
+ * This function uses modulo arithmetic to return an integer with it's digits
+ * in reverse order to the value passed.
+ */
 int reverse_int(int value) {
 
 	/* local variables */
@@ -71,10 +93,12 @@ int reverse_int(int value) {
 }
 
 /* read_rest_of_line
+ *
  * This function reads characters from the standard input until there are 
  * no characters left to read. This is so when someone enters 5 chars, when
  * you only need 2, the remaining 3 chars are read from the input buffer, and
- * aren't read into subsequent input reads. */
+ * aren't read into subsequent input reads.
+ */
 void read_rest_of_line(void) {
 	/* local variables */
     int ch;
@@ -91,6 +115,7 @@ void read_rest_of_line(void) {
 }
 
 /* print_directory
+ *
  * Prints the directory from which the program is being run.
  */
 void print_directory(void) {
@@ -105,7 +130,11 @@ void print_directory(void) {
 
 
 /* working_directory
+ *
  * Gets the working directory.
+ *
+ * Note this is not the directory where the executable lives, but where the 
+ * executable was called from. 
  */
 void working_directory(char *c) {
 
@@ -120,6 +149,7 @@ void working_directory(char *c) {
 }
 
 /* get_input
+ *
  * Reads chars from stdin until newline char is entered, at which point 
  * it attempts to convert the chars entered to an int and saves it to the 
  * the pointer passed.
@@ -138,10 +168,11 @@ void get_input(int *input) {
 	*input = atoi(buffer);
 }
 
-/* get_input
+/* get_input_ll
+ *
  * Reads chars from stdin until newline char is entered, at which point 
- * it attempts to convert the chars entered to an int and saves it to the 
- * the pointer passed.
+ * it attempts to convert the chars entered to a long long int and saves
+ * it to the the pointer passed.
  */
 void get_input_ll(long long int *input) {
 
@@ -157,7 +188,28 @@ void get_input_ll(long long int *input) {
 	*input = atoll(buffer);
 }
 
-int check_answer(int question, long long int answer) {
+/* check_answer
+ *
+ * This function uses the defined term ANSWER_FILEPATH to read from a text
+ * file containing the answers to the problems.
+ *
+ * The function expects the format to be
+ * <question><'.'><' '><answer>
+ * where the question is some string parseable as an integer, and the answer
+ * is some string parseable as a long long int.
+ *
+ * It reads chars until the first '.' into a buffer and attempts to convert
+ * them into an integer.
+ *
+ * It then checks if this matches the question parameter, if not reads the rest
+ * of the line and begins again. 
+ *
+ * If it does match, the succeeding chars are read into the buffer and
+ * this buffer is converted into a long long int.
+ *
+ * The function returns true if this value matches the answer parameter.
+ */
+bool check_answer(int question, long long int answer) {
 
 	/* local variables */
 	FILE *fp;
@@ -201,7 +253,7 @@ int check_answer(int question, long long int answer) {
 				buffer[i] = '\0';
 
 				if (answer == atoll(buffer))
-					return 0;
+					return true;
 
 				break;
 			}
@@ -215,5 +267,5 @@ int check_answer(int question, long long int answer) {
 		}
 	}
 
-	return 1;
+	return false;
 }
