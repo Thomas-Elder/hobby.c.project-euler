@@ -33,16 +33,23 @@ int main(void)
 	results[5] = test_sum_square_difference();
 	results[6] = test_nth_prime();
 	results[7] = test_largest_product_in_a_series();
-	results[8] = test_check_answer();
 
 	printf("\n");
-	for (i = 0; i < 8; i++) {
+	for (i = 0; i <= 8; i++) {
 		if (results[i] == 0) {
 			printf("Problem %d passed.\n", i + 1);
 		} else {
 			printf("Problem %d failed.\n", i + 1);
 		}
 	}
+
+	printf("\n");
+	printf("%s\n", "Testing answer validation... ");
+
+	if (test_check_answer() == 1) 
+		printf("%s\n", "answer validation failed");
+	else
+		printf("%s\n", "answer validation passed");
 
 	printf("\n");
 	return 0;
@@ -223,10 +230,21 @@ int test_largest_product_in_a_series(void) {
 int test_check_answer(void) {
 
 	/* arrange */
+	long long int expected, result, answer;
+	int question;
 
 	/* act */ 
+	question = 30;
+	answer = 443839;
+
+	expected = 0;
+	result = 1;
+
+	result = check_answer(question, answer);
 
 	/* assert */
+	if (expected != result)
+		return 1;
 
-	return 1;
+	return 0;
 }

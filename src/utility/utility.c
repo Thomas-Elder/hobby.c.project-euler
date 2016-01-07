@@ -153,11 +153,10 @@ int check_answer(int question, long long int answer) {
 	FILE *fp;
 	char buffer[256];
 	char c;
-	int i, correct_answer;
+	int i;
 
 	fp = fopen(ANSWER_FILEPATH, "r");
 	i = 0;
-	correct_answer = 0;
 	c = '0';
 
 	if (fp == NULL) {
@@ -167,13 +166,21 @@ int check_answer(int question, long long int answer) {
 
 		while (c != EOF) {
 
-			c = getc(fp);
+			/* First get the answer number */
+			while ((c = getc(fp)) != '.') 
+				buffer[i++] = c;
+
+			/* terminate the string */
+			buffer[i] = '\0';
 
 			/**/
-			if (c - '0' == question) {
+			if (question == atoi(buffer)) {
+
+				/* back to the start of the buffer */
+				i = 0;
 
 				/* move the pointer passed the point, and space */
-				while ((c = getc(fp)) != '.');
+				/*while ((c = getc(fp)) != '.');*/
 				getc(fp);
 
 				/* read into the buffer the rest of the line */
@@ -183,16 +190,20 @@ int check_answer(int question, long long int answer) {
 				/* terminate the string */
 				buffer[i] = '\0';
 
-				correct_answer = atoi(buffer);
-
-				if (answer == correct_answer) {
-					return 1;
-				}
+				if (answer == atoi(buffer))
+					return 0;
 
 				break;
 			}
+
+			/* This isn't the question we're after so */
+			/* reset buffer point */
+			i = 0;
+
+			/* then read out the line */
+			while ((c = getc(fp)) != '\n');
 		}
 	}
 
-	return 0;
+	return 1;
 }
