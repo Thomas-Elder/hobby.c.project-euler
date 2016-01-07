@@ -38,7 +38,7 @@
  *
  * NOTES      : Any further info, probably more about it's dev process.
  */
-int test_sum_multiples(void);
+bool test_sum_multiples(void);
 
 /* test_sum_even_fibonacci_numbers
  *
@@ -60,7 +60,7 @@ int test_sum_multiples(void);
  *
  * NOTES      : Any further info, probably more about it's dev process.
  */
-int test_sum_even_fibonacci_numbers(void);
+bool test_sum_even_fibonacci_numbers(void);
 
 /* test_largest_prime_factor
  *
@@ -82,7 +82,7 @@ int test_sum_even_fibonacci_numbers(void);
  *
  * NOTES      : Any further info, probably more about it's dev process.
  */
-int test_largest_prime_factor(void);
+bool test_largest_prime_factor(void);
 
 /* test_largest_palindrome_product
  *
@@ -104,7 +104,7 @@ int test_largest_prime_factor(void);
  *
  * NOTES      : Any further info, probably more about it's dev process.
  */
-int test_largest_palindrome_product(void);
+bool test_largest_palindrome_product(void);
 
 /* test_smallest_multiple
  *
@@ -127,7 +127,7 @@ int test_largest_palindrome_product(void);
  *
  * NOTES      : Any further info, probably more about it's dev process.
  */
-int test_smallest_multiple(void);
+bool test_smallest_multiple(void);
 
 /* test_sum_square_difference
  *
@@ -149,7 +149,7 @@ int test_smallest_multiple(void);
  *
  * NOTES      : Any further info, probably more about it's dev process.
  */
-int test_sum_square_difference(void);
+bool test_sum_square_difference(void);
 
 /* test_nth_prime
  *
@@ -171,7 +171,7 @@ int test_sum_square_difference(void);
  *
  * NOTES      : Any further info, probably more about it's dev process.
  */
-int test_nth_prime(void);
+bool test_nth_prime(void);
 
 /* test_largest_product_in_a_series
  *
@@ -195,7 +195,7 @@ int test_nth_prime(void);
  *
  * NOTES      : Any further info, probably more about it's dev process.
  */
-int test_largest_product_in_a_series(void);
+bool test_largest_product_in_a_series(void);
 
 /* test_check_answer
  *
@@ -217,7 +217,7 @@ int test_largest_product_in_a_series(void);
  *
  * NOTES      : Any further info, probably more about it's dev process.
  */
-int test_check_answer(int question, long long int answer);
+bool test_check_answer(int question, long long int answer);
 
 /* test_is_prime
  *

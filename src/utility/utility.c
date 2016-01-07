@@ -17,16 +17,13 @@ bool is_prime(int value) {
 	square_root = sqrt(value);
 	limit = floor(square_root);
 
-	/* 2 and 3 are prime */
-	if (value == 3 || value == 2)
+	if (value == 2 || value == 3)
 		return true;
 
-	/* check if the value is divisible by 2 or 3 */
 	if (value % 2 == 0 || value % 3 == 0)
 		return false;
 
-	/* */
-	for (i = 5; i < limit; i += 2) {
+	for (i = 5; i <= limit; i += 2) {
 
 		if (value % i == 0)
 			return false;

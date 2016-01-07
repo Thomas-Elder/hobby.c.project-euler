@@ -6,10 +6,10 @@ int main(void)
 {
 	/* local variables */
 	int i;
-	int results[8];
+	bool results[8];
 
 	for (i = 0; i < 8; i++)
-		results[i] = 1;
+		results[i] = false;
 
 	printf("\n");
 	printf("%s\n", "Welcome to testing for Tom's Project Euler solutions!");
@@ -36,7 +36,7 @@ int main(void)
 
 	printf("\n");
 	for (i = 0; i < 8; i++) {
-		if (results[i] == 0) {
+		if (results[i]) {
 			printf("Problem %d passed.\n", i + 1);
 		} else {
 			printf("Problem %d failed.\n", i + 1);
@@ -89,10 +89,10 @@ int main(void)
 	return 0;
 }
 
-/**
+/* test_sum_multiples
  *
  */
-int test_sum_multiples(void) {
+bool test_sum_multiples(void) {
 
 	/* arrange */
 	int expected, result;
@@ -104,16 +104,13 @@ int test_sum_multiples(void) {
 	result = sum_multiples(3, 5, 1000);
 
 	/* assert */
-	if (expected != result)
-		return 1;
-
-	return 0;
+	return expected == result;
 }
 
-/**
+/* test_sum_even_fibonacci_numbers
  *
  */
-int test_sum_even_fibonacci_numbers(void) {
+bool test_sum_even_fibonacci_numbers(void) {
 
 	/* arrange */
 	int expected, result, limit;
@@ -126,16 +123,13 @@ int test_sum_even_fibonacci_numbers(void) {
 	result = sum_even_fibonacci_numbers(limit);
 
 	/* assert */
-	if (expected != result)
-		return 1;
-
-	return 0;
+	return expected == result;
 }
 
-/**
+/* test_largest_prime_factor
  *
  */
-int test_largest_prime_factor(void) {
+bool test_largest_prime_factor(void) {
 
 	/* arrange */
 	long long int expected, result, limit;
@@ -148,16 +142,13 @@ int test_largest_prime_factor(void) {
 	result = largest_prime_factor(limit);
 
 	/* assert */
-	if (expected != result)
-		return 1;
-
-	return 0;
+	return expected == result;
 }
 
-/**
+/* test_largest_palindrome_product
  *
  */
-int test_largest_palindrome_product(void) {
+bool test_largest_palindrome_product(void) {
 
 	/* arrange */
 	int expected, result;
@@ -169,16 +160,13 @@ int test_largest_palindrome_product(void) {
 	result = largest_palindrome_product();
 
 	/* assert */
-	if (expected != result)
-		return 1;
-
-	return 0;
+	return expected == result;
 }
 
-/**
+/* test_smallest_multiple
  *
  */
-int test_smallest_multiple(void) {
+bool test_smallest_multiple(void) {
 
 	/* arrange */
 	int expected, result;
@@ -190,16 +178,13 @@ int test_smallest_multiple(void) {
 	result = smallest_multiple(10, 20);
 
 	/* assert */
-	if (expected != result)
-		return 1;
-
-	return 0;
+	return expected == result;
 }
 
-/**
+/* test_sum_square_difference
  *
  */
-int test_sum_square_difference(void) {
+bool test_sum_square_difference(void) {
 
 	/* arrange */
 	int expected, result;
@@ -211,16 +196,13 @@ int test_sum_square_difference(void) {
 	result = sum_square_difference(100);
 
 	/* assert */
-	if (expected != result)
-		return 1;
-
-	return 0;
+	return expected == result;
 }
 
-/**
+/* test_nth_prime
  *
  */
-int test_nth_prime(void) {
+bool test_nth_prime(void) {
 
 	/* arrange */
 	int expected, result;
@@ -229,21 +211,18 @@ int test_nth_prime(void) {
 	result = 0;
 
 	/* act */ 
-	result = nth_prime(10);
+	result = nth_prime(10001);
 
 	printf("Nth prime is %d\n", result);
 
 	/* assert */
-	if (expected != result)
-		return 1;
-
-	return 0;
+	return expected == result;
 }
 
-/**
+/*
  *
  */
-int test_largest_product_in_a_series(void) {
+bool test_largest_product_in_a_series(void) {
 
 	/* arrange */
 	long long int expected, result;
@@ -257,13 +236,10 @@ int test_largest_product_in_a_series(void) {
 	result = largest_product_in_a_series(filepath, 13);
 
 	/* assert */
-	if (expected != result)
-		return 1;
-
-	return 0;
+	return expected == result;
 }
 
-int test_check_answer(int question, long long int answer) {
+bool test_check_answer(int question, long long int answer) {
 
 	/* arrange */
 	long long int expected, result;
@@ -275,10 +251,7 @@ int test_check_answer(int question, long long int answer) {
 	result = check_answer(question, answer);
 
 	/* assert */
-	if (expected != result)
-		return 1;
-
-	return 0;
+	return expected == result;
 }
 
 

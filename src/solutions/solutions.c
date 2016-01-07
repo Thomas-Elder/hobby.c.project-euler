@@ -169,31 +169,20 @@ int sum_square_difference(int limit) {
 int nth_prime(int n) {
 
 	/* local variables */
-	int i, count, result;
-
+	int i, count;
 
 	/* initilise */
 	count = 1;
-	result = 0;
 	i = 2;
 
 	/* go */
 	while (count != n + 1) {
 
-		if (is_prime(i)) {
-
-
-			printf("The %dth prime number is:%d\n", count, i);
-
+		if (is_prime(i++))
 			count++;
-		}
-
-		i++;
 	}
 
-	result = i - 1;
-
-	return result;
+	return i - 1;
 }
 
 /* largest_product_in_a_series
