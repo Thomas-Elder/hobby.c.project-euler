@@ -3,7 +3,7 @@
 #ifndef TEST_H_INCLUDED
 #define TEST_H_INCLUDED
 
-/* includes */
+/* project includes */
 #include "..\src\utility\stack.h"
 #include "..\src\utility\utility.h"
 #include "..\src\solutions\solutions.h"
@@ -16,133 +16,228 @@
 
 /* prototypes */
 
-/* sum_even_fibonacci_numbers
+/* test_sum_multiples
  *
- * PARAMETERS : int limit  
+ * PARAMETERS : void
  *
- * PURPOSE    : takes a limit and sums all even numbers in the Fibonacci 
- *              sequence under that limit.
- * 
- * RETURNs    : returns the sum of those even numbers.
+ * RETURNS    : bool
  *
- * NOTES      :
+ * FUCTION TESTED    : sum_multiples()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS : int a = 3
+ *                           int b = 5
+ *                           int limit = 1000
+ *              EXPECTED   : 233168
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
  */
 int test_sum_multiples(void);
 
-/* sum_even_fibonacci_numbers
+/* test_sum_even_fibonacci_numbers
  *
- * PARAMETERS : int limit  
+ * PARAMETERS : void
  *
- * PURPOSE    : takes a limit and sums all even numbers in the Fibonacci 
- *              sequence under that limit.
- * 
- * RETURNs    : returns the sum of those even numbers.
+ * RETURNS    : bool
  *
- * NOTES      :
+ * FUCTION TESTED    : sum_even_fibonacci_numbers()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS : limit = 4000000;
+ *              EXPECTED   : 4613732
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
  */
 int test_sum_even_fibonacci_numbers(void);
 
-/* sum_even_fibonacci_numbers
+/* test_largest_prime_factor
  *
- * PARAMETERS : int limit  
+ * PARAMETERS : void
  *
- * PURPOSE    : takes a limit and sums all even numbers in the Fibonacci 
- *              sequence under that limit.
- * 
- * RETURNs    : returns the sum of those even numbers.
+ * RETURNS    : bool
  *
- * NOTES      :
+ * FUCTION TESTED    : largest_prime_factor()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS : limit = 600851475143
+ *              EXPECTED   : 6857
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
  */
 int test_largest_prime_factor(void);
 
-/* sum_even_fibonacci_numbers
+/* test_largest_palindrome_product
  *
- * PARAMETERS : int limit  
+ * PARAMETERS : void
  *
- * PURPOSE    : takes a limit and sums all even numbers in the Fibonacci 
- *              sequence under that limit.
- * 
- * RETURNs    : returns the sum of those even numbers.
+ * RETURNS    : bool
  *
- * NOTES      :
+ * FUCTION TESTED    : largest_palindrome_product()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   : 906609
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
  */
 int test_largest_palindrome_product(void);
 
 /* test_smallest_multiple
  *
- * PARAMETERS : int limit  
+ * PARAMETERS : void
  *
- * PURPOSE    : takes a limit and sums all even numbers in the Fibonacci 
- *              sequence under that limit.
- * 
- * RETURNs    : returns the sum of those even numbers.
+ * RETURNS    : bool
  *
- * NOTES      :
+ * FUCTION TESTED    : smallest_multiple()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS : int low = 10
+ *                           int high = 20
+ *              EXPECTED   : 232792560
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
  */
 int test_smallest_multiple(void);
 
 /* test_sum_square_difference
  *
- * PARAMETERS : int limit  
+ * PARAMETERS : void
  *
- * PURPOSE    : takes a limit and sums all even numbers in the Fibonacci 
- *              sequence under that limit.
- * 
- * RETURNs    : returns the sum of those even numbers.
+ * RETURNS    : bool
  *
- * NOTES      :
+ * FUCTION TESTED    : sum_square_difference()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS : int limit = 100
+ *              EXPECTED   : 232792560
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
  */
 int test_sum_square_difference(void);
 
 /* test_nth_prime
  *
- * PARAMETERS : int limit  
+ * PARAMETERS : void
  *
- * PURPOSE    : takes a limit and sums all even numbers in the Fibonacci 
- *              sequence under that limit.
- * 
- * RETURNs    : returns the sum of those even numbers.
+ * RETURNS    : bool
  *
- * NOTES      :
+ * FUCTION TESTED    : nth_prime()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS : int n = 10001
+ *              EXPECTED   : 104743
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
  */
 int test_nth_prime(void);
 
 /* test_largest_product_in_a_series
  *
- * PARAMETERS : int limit  
+ * PARAMETERS : void
  *
- * PURPOSE    : takes a limit and sums all even numbers in the Fibonacci 
- *              sequence under that limit.
- * 
- * RETURN    : returns the sum of those even numbers.
+ * RETURNS    : bool
  *
- * NOTES      :
+ * FUCTION TESTED    : largest_product_in_a_series()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS : char *filepath =
+                "E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt"
+ *                           int product_count = 13
+ *              EXPECTED   : 23514624000
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
  */
 int test_largest_product_in_a_series(void);
 
 /* test_check_answer
  *
- * PARAMETERS : int limit  
+ * PARAMETERS : void
  *
- * PURPOSE    : takes a limit and sums all even numbers in the Fibonacci 
- *              sequence under that limit.
- * 
- * RETURNs    : returns the sum of those even numbers.
+ * RETURNS    : bool
  *
- * NOTES      :
+ * FUCTION TESTED    : check_answer()
+ *
+ * FUNCTION'S SOURCE : utility.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
  */
 int test_check_answer(int question, long long int answer);
 
 /* test_is_prime
  *
- * PARAMETERS : int limit  
+ * PARAMETERS : void
  *
- * RETURNS    : bool 
+ * RETURNS    : bool
  *
- * PURPOSE    : takes an expected result and a number, and returns true if 
- *              the number lives that expectation of primeness.
+ * FUCTION TESTED    : is_prime()
  *
- * NOTES      :
+ * FUNCTION'S SOURCE : utility.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
  */
 bool test_is_prime(bool expected, int number);
 

@@ -3,9 +3,10 @@
 #ifndef UTILITY_H_INCLUDED
 #define UTILITY_H_INCLUDED
 
-/* includes */
+/* project includes */
 #include "..\project_euler.h"
 
+/* std includes */
 #include <math.h> 
 #include <stdbool.h>
 #include <string.h>
@@ -32,7 +33,7 @@
  *
  * PURPOSE    : Tests for primeness of an integer.
  *
- * NOTES      : Currently pretty unsafe and ineffecient. 
+ * NOTES      : Currently pretty unsafe and ineffecient.
  */
 bool is_prime(int value);
 
@@ -68,8 +69,7 @@ int reverse_int(int value);
  *
  * RETURNS    : void
  *
- * PURPOSE    : Takes a point to an int, and assigns the int conversion of
- *              user input. 
+ * PURPOSE    : Takes a pointer 
  *
  * NOTES      :
  */
@@ -82,7 +82,7 @@ void get_input(int *input);
  * RETURNS    : void
  *
  * PURPOSE    : Takes a pointer to a long long int and assigns the long long int
- *              conversion of the input by the user.  
+ *              conversion of the input by the user.
  *
  * NOTES      :
  */
@@ -93,10 +93,10 @@ void get_input_ll(long long int *input);
  * PARAMETERS : void
  *  
  * RETURNS    : void
- * 
+ *
  * PURPOSE    : Reads chars from the stdin buffer to prevent them being used
  *              accidentally in subsequent input reads.
- * 
+ *
  * NOTES      :
  */
 void read_rest_of_line(void);

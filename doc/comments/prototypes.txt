@@ -1,0 +1,14 @@
+To be placed at the top of each function's prototype in the header file.
+
+/* function_name
+ *
+ * PARAMETERS : int value
+ *              char other_value
+ *
+ * RETURNS    : int
+ *              bool
+ *
+ * PURPOSE    : Gist of function's goal.
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
+ */

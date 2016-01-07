@@ -1,0 +1,5 @@
+To be placed at the top of each function's definition in the source file.
+
+/* function_name
+ *
+ */

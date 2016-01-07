@@ -3,7 +3,7 @@
 #ifndef SOLUTIONS_H_INCLUDED
 #define SOLUTIONS_H_INCLUDED
 
-/* includes */
+/* project includes */
 #include "..\project_euler.h"
 
 /* definitions */

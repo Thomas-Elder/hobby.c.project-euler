@@ -3,15 +3,16 @@
 #ifndef PROJECT_EULER_H_INCLUDED
 #define PROJECT_EULER_H_INCLUDED
 
-/* includes */
+/* project includes */
+#include "solutions\solutions.h"
+#include "utility\utility.h"
+#include "utility\stack.h"
+
+/* std includes */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h> 
 #include <stdint.h>
-
-#include "solutions\solutions.h"
-#include "utility\utility.h"
-#include "utility\stack.h"
 
 /* definitions */
 

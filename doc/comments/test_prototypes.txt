@@ -1,0 +1,22 @@
+To be placed at the top of each test function's prototype in the header file.
+
+/* function_name
+ *
+ * PARAMETERS : void
+ *
+ * RETURNS    : bool
+ *
+ * FUCTION TESTED    : sum_multiples()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
+ */

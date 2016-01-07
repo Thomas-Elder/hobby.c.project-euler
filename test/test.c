@@ -285,7 +285,7 @@ int test_check_answer(int question, long long int answer) {
 bool test_is_prime(bool expected, int number) {
 
 	/* arrange */
-	bool result;	
+	bool result;
 
 	/* act */
 	result = is_prime(number);
