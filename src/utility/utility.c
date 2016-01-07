@@ -155,6 +155,8 @@ int check_answer(int question, long long int answer) {
 	char c;
 	int i;
 
+	printf("%llu\n", answer);
+
 	fp = fopen(ANSWER_FILEPATH, "r");
 	i = 0;
 	c = '0';
@@ -190,7 +192,7 @@ int check_answer(int question, long long int answer) {
 				/* terminate the string */
 				buffer[i] = '\0';
 
-				if (answer == atoi(buffer))
+				if (answer == atoll(buffer))
 					return 0;
 
 				break;

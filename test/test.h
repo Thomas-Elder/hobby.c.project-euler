@@ -22,6 +22,6 @@ int test_smallest_multiple(void);
 int test_sum_square_difference(void);
 int test_nth_prime(void);
 int test_largest_product_in_a_series(void);
-int test_check_answer(void);
+int test_check_answer(int question, long long int answer);
 
 #endif

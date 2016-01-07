@@ -46,10 +46,23 @@ int main(void)
 	printf("\n");
 	printf("%s\n", "Testing answer validation... ");
 
-	if (test_check_answer() == 1) 
-		printf("%s\n", "answer validation failed");
+	printf("%s\n", "Testing question 5... ");
+	if (test_check_answer(5, 232792560) == 1) 
+		printf("%s\n", "Answer validation failed");
 	else
-		printf("%s\n", "answer validation passed");
+		printf("%s\n", "Answer validation passed");
+
+	printf("%s\n", "Testing question 30... ");
+	if (test_check_answer(30, 443839) == 1) 
+		printf("%s\n", "Answer validation failed");
+	else
+		printf("%s\n", "Answer validation passed");
+
+	printf("%s\n", "Testing question 101... ");
+	if (test_check_answer(101, 37076114526) == 1) 
+		printf("%s\n", "Answer validation failed");
+	else
+		printf("%s\n", "Answer validation passed");
 
 	printf("\n");
 	return 0;
@@ -227,18 +240,16 @@ int test_largest_product_in_a_series(void) {
 	return 0;
 }
 
-int test_check_answer(void) {
+int test_check_answer(int question, long long int answer) {
 
 	/* arrange */
-	long long int expected, result, answer;
-	int question;
+	long long int expected, result;
 
 	/* act */ 
-	question = 30;
-	answer = 443839;
-
 	expected = 0;
 	result = 1;
+
+	printf("%llu\n", answer);
 
 	result = check_answer(question, answer);
 
