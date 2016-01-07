@@ -114,7 +114,7 @@ int test_nth_prime(void);
  * PURPOSE    : takes a limit and sums all even numbers in the Fibonacci 
  *              sequence under that limit.
  * 
- * RETURNs    : returns the sum of those even numbers.
+ * RETURN    : returns the sum of those even numbers.
  *
  * NOTES      :
  */

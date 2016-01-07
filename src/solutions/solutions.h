@@ -20,7 +20,7 @@
  * PURPOSE    : take two numbers and a limit. Sums all the multiples of those 
  *              numbers which are no greater than the limit.
  *
- * RETURNs    : returns the sum of those multiples
+ * RETURNS    : returns the sum of those multiples
  *
  * NOTES      :
  */
@@ -33,7 +33,7 @@ int sum_multiples(int a, int b, int limit);
  * PURPOSE    : takes a limit and sums all even numbers in the Fibonacci 
  *              sequence under that limit.
  * 
- * RETURNs    : returns the sum of those even numbers.
+ * RETURNS    : returns the sum of those even numbers.
  *
  * NOTES      :
  */
@@ -45,7 +45,7 @@ int sum_even_fibonacci_numbers(int limit);
  *
  * PURPOSE    : take a number and finds the largest prime factor of that number.
  *
- * RETURNs    : returns the largest prime factor of the passed number. 
+ * RETURNS    : returns the largest prime factor of the passed number. 
  *
  * NOTES      :
  */
@@ -57,7 +57,7 @@ int largest_prime_factor(long long int number);
  *
  * PURPOSE    : 
  *
- * RETURNs    : 
+ * RETURNS    : 
  *
  * NOTES      :
  */
@@ -70,7 +70,7 @@ int largest_palindrome_product();
  *
  * PURPOSE    : 
  *
- * RETURNs    : 
+ * RETURNS    : 
  *
  * NOTES      :
  */
@@ -82,7 +82,7 @@ int smallest_multiple(int low, int high);
  *
  * PURPOSE    :
  *
- * RETURNs    :
+ * RETURNS    :
  *
  * NOTES      :
  */
@@ -94,7 +94,7 @@ int sum_square_difference(int limit);
  *
  * PURPOSE    :
  *
- * RETURNs    :
+ * RETURNS    :
  *
  * NOTES      :
  */
@@ -107,7 +107,7 @@ int nth_prime(int n);
  *
  * PURPOSE    :
  *
- * RETURNs    : long long int
+ * RETURNS    : long long int
  *
  * NOTES      :
  */

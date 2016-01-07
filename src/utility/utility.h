@@ -28,7 +28,7 @@
  *
  * PARAMETERS : int value
  *
- * RETURNS    : bool  
+ * RETURNS    : bool
  *
  * PURPOSE    : Tests for primeness of an integer.
  *
@@ -40,7 +40,7 @@ bool is_prime(int value);
  *
  * PARAMETERS : int value
  *
- * RETURNS    : bool  
+ * RETURNS    : bool
  *
  * PURPOSE    : Compares the digits of an integer with the reverse order of 
  *              digits and returns true if those patterns match.
@@ -53,7 +53,7 @@ bool is_palindrome(int value);
  *
  * PARAMETERS : int value
  *
- * RETURNS    : int  
+ * RETURNS    : int
  *
  * PURPOSE    : Returns an integer who's digits are in the reverse order of the
  *              value passed.
@@ -66,9 +66,9 @@ int reverse_int(int value);
  *
  * PARAMETERS : int *input
  *
- * RETURNS    : void  
+ * RETURNS    : void
  *
- * PURPOSE    : Takes a point to an int, and assigns the int conversion of 
+ * PURPOSE    : Takes a point to an int, and assigns the int conversion of
  *              user input. 
  *
  * NOTES      :
@@ -79,9 +79,9 @@ void get_input(int *input);
  *
  * PARAMETERS : long long int *input
  *
- * RETURNS    : void  
+ * RETURNS    : void
  *
- * PURPOSE    : Takes a pointer to a long long int and assigns the long long int 
+ * PURPOSE    : Takes a pointer to a long long int and assigns the long long int
  *              conversion of the input by the user.  
  *
  * NOTES      :
@@ -95,7 +95,7 @@ void get_input_ll(long long int *input);
  * RETURNS    : void
  * 
  * PURPOSE    : Reads chars from the stdin buffer to prevent them being used
- *              accidentally in subsequent input reads. 
+ *              accidentally in subsequent input reads.
  * 
  * NOTES      :
  */
@@ -117,10 +117,10 @@ void print_directory(void);
  *
  * PARAMETERS : char *c
  *
- * RETURNS    : void 
+ * RETURNS    : void
  *
  * PURPOSE    : Finds the current working directoru and stores in the passed
- *              char pointer. 
+ *              char pointer.
  *
  * NOTES      :
  */
@@ -133,8 +133,7 @@ void working_directory(char *c);
  *
  * RETURNS    : int
  * 
- * PURPOSE    : 
- *
+ * PURPOSE    :
  *
  * NOTES      :
  */
