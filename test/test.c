@@ -6,7 +6,7 @@ int main(void)
 {
 	/* local variables */
 	int i;
-	int results[9];
+	int results[8];
 
 	for (i = 0; i < 8; i++)
 		results[i] = 1;
@@ -35,7 +35,7 @@ int main(void)
 	results[7] = test_largest_product_in_a_series();
 
 	printf("\n");
-	for (i = 0; i <= 8; i++) {
+	for (i = 0; i < 8; i++) {
 		if (results[i] == 0) {
 			printf("Problem %d passed.\n", i + 1);
 		} else {
@@ -47,22 +47,43 @@ int main(void)
 	printf("%s\n", "Testing answer validation... ");
 
 	printf("%s\n", "Testing question 5... ");
+
 	if (test_check_answer(5, 232792560) == 1) 
 		printf("%s\n", "Answer validation failed");
 	else
 		printf("%s\n", "Answer validation passed");
 
 	printf("%s\n", "Testing question 30... ");
+
 	if (test_check_answer(30, 443839) == 1) 
 		printf("%s\n", "Answer validation failed");
 	else
 		printf("%s\n", "Answer validation passed");
 
 	printf("%s\n", "Testing question 101... ");
+
 	if (test_check_answer(101, 37076114526) == 1) 
 		printf("%s\n", "Answer validation failed");
 	else
 		printf("%s\n", "Answer validation passed");
+
+	printf("%s\n", "Testing is_prime function... ");
+
+	if (test_is_prime(true, 2)) 
+		printf("%s\n", "2 is a prime number correct ");
+
+	if (test_is_prime(true, 17))
+		printf("%s\n", "17 is a prime number correct");
+
+	if (test_is_prime(false, 21))
+		printf("%s\n", "21 is not prime correct");
+
+	if (test_is_prime(true, 15485863))
+		printf("%s\n", "15,485,863 is a prime number correct");
+
+	if (test_is_prime(false	, 103841))
+		printf("%s\n", "correct, 103841 is not prime");
+
 
 	printf("\n");
 	return 0;
@@ -208,7 +229,9 @@ int test_nth_prime(void) {
 	result = 0;
 
 	/* act */ 
-	result = nth_prime(10001);
+	result = nth_prime(10);
+
+	printf("Nth prime is %d\n", result);
 
 	/* assert */
 	if (expected != result)
@@ -249,8 +272,6 @@ int test_check_answer(int question, long long int answer) {
 	expected = 0;
 	result = 1;
 
-	printf("%llu\n", answer);
-
 	result = check_answer(question, answer);
 
 	/* assert */
@@ -258,4 +279,17 @@ int test_check_answer(int question, long long int answer) {
 		return 1;
 
 	return 0;
+}
+
+
+bool test_is_prime(bool expected, int number) {
+
+	/* arrange */
+	bool result;	
+
+	/* act */
+	result = is_prime(number);
+
+	/* assert */ 
+	return result == expected;
 }

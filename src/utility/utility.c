@@ -4,21 +4,6 @@
 
 /* Function Definitions */
 
-/* working_directory
- * 
- */
-void working_directory(char *c) {
-
-	char working_directory[FILENAME_MAX];
-
- 	if (!GetCurrentDir(working_directory, sizeof(working_directory)))
-     	printf("%s\n", "Error!");
-
-    working_directory[sizeof(working_directory) - 1] = '\0'; /* not really required */
-
-    strcpy(c, working_directory);
-}
-
 /* is_prime
  * This function returns true if the number is prime, and 
  * false if it is not. 
@@ -26,9 +11,22 @@ void working_directory(char *c) {
 bool is_prime(int value) {
 
 	/* local variables */
-	int i;
+	double square_root;
+	int i, limit;
 
-	for (i = 2; i < value; i++) {
+	square_root = sqrt(value);
+	limit = floor(square_root);
+
+	/* 2 and 3 are prime */
+	if (value == 3 || value == 2)
+		return true;
+
+	/* check if the value is divisible by 2 or 3 */
+	if (value % 2 == 0 || value % 3 == 0)
+		return false;
+
+	/* */
+	for (i = 5; i < limit; i += 2) {
 
 		if (value % i == 0)
 			return false;
@@ -80,8 +78,7 @@ int reverse_int(int value) {
  * no characters left to read. This is so when someone enters 5 chars, when
  * you only need 2, the remaining 3 chars are read from the input buffer, and
  * aren't read into subsequent input reads. */
-void read_rest_of_line(void)
-{
+void read_rest_of_line(void) {
 	/* local variables */
     int ch;
 
@@ -107,6 +104,22 @@ void print_directory(void) {
 	working_directory(cCurrentPath);
 
 	printf("%s%s\n", "This program is being run from: ", cCurrentPath);
+}
+
+
+/* working_directory
+ * Gets the working directory.
+ */
+void working_directory(char *c) {
+
+	char working_directory[FILENAME_MAX];
+
+ 	if (!GetCurrentDir(working_directory, sizeof(working_directory)))
+     	printf("%s\n", "Error!");
+
+    working_directory[sizeof(working_directory) - 1] = '\0'; /* not really required */
+
+    strcpy(c, working_directory);
 }
 
 /* get_input
@@ -144,7 +157,7 @@ void get_input_ll(long long int *input) {
 	while ((c = getc(stdin)) != '\n')
 		buffer[i++] = c;
 
-	*input = atoi(buffer);
+	*input = atoll(buffer);
 }
 
 int check_answer(int question, long long int answer) {
@@ -154,8 +167,6 @@ int check_answer(int question, long long int answer) {
 	char buffer[256];
 	char c;
 	int i;
-
-	printf("%llu\n", answer);
 
 	fp = fopen(ANSWER_FILEPATH, "r");
 	i = 0;

@@ -180,17 +180,18 @@ int nth_prime(int n) {
 	/* go */
 	while (count != n + 1) {
 
-		/* weeding out even numbers */
-		if (i > 2 && i % 2 == 0) {
-		} else {
-			if (is_prime(i)) {
-				result = i;
-				count++;
-			}
+		if (is_prime(i)) {
+
+
+			printf("The %dth prime number is:%d\n", count, i);
+
+			count++;
 		}
 
 		i++;
 	}
+
+	result = i - 1;
 
 	return result;
 }

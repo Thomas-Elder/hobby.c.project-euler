@@ -11,12 +11,11 @@
 /* prototypes */
 
 /** 
- * \fn int sum_multiples(int a, int b, int limit)
- * \brief sums multiples of two integers smaller than some limit.
+ * sum_multiples
  *
- * \param a an integer
- * \param b an integer
- * \param limit an integer  
+ * PARAMETERS : int a 
+ *              int b
+ *              int limit 
  *
  * PURPOSE    : take two numbers and a limit. Sums all the multiples of those 
  *              numbers which are no greater than the limit.
@@ -27,7 +26,7 @@
  */
 int sum_multiples(int a, int b, int limit);
 
-/* even_fibonacci_numbers
+/* sum_even_fibonacci_numbers
  *
  * PARAMETERS : int limit  
  *
