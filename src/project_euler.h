@@ -6,7 +6,6 @@
 /* project includes */
 #include "solutions\solutions.h"
 #include "utility\utility.h"
-#include "utility\stack.h"
 
 /* std includes */
 #include <stdio.h>

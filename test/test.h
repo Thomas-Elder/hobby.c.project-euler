@@ -4,7 +4,6 @@
 #define TEST_H_INCLUDED
 
 /* project includes */
-#include "..\src\utility\stack.h"
 #include "..\src\utility\utility.h"
 #include "..\src\solutions\solutions.h"
 #include "..\src\project_euler.h"
