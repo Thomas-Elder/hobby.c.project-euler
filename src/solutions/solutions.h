@@ -113,4 +113,17 @@ int nth_prime(int n);
  */
 long long int largest_product_in_a_series(char *filepath, int product_count);
 
+/* special_pythagorean_triplet
+ *
+ * PARAMETERS : int limit
+ *
+ * PURPOSE    : to return the product abc where a < b < c, and a^2 + b^2 = c^2,
+ *              and a + b + c = limit. 
+ *
+ * RETURNS    : int
+ *
+ * NOTES      :
+ */
+int special_pythagorean_triplet(int limit);
+
 #endif

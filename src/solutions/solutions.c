@@ -234,3 +234,27 @@ long long int largest_product_in_a_series(char *filepath, int product_count) {
 
 	return result;
 }
+
+/* special_pythagorean_triplet
+ *
+ */
+int special_pythagorean_triplet(int limit) {
+	/* local variables */
+	int a, b, c, third_limit, result;
+
+	third_limit = (limit / 3) + 2;
+	result = 0;
+
+	for (a = 4; a < third_limit; a++) {
+		for (b = 5; b < third_limit; b++) {
+			for (c = 6; c < third_limit; c++) {
+				if (pythagorean_triplet(a, b, c)) {
+					if (a + b + c == limit)
+						result = a * b * c;
+				}
+			}
+		}
+	}
+
+	return result;
+}

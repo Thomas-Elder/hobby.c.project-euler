@@ -25,6 +25,23 @@
 
 /* prototypes */
 
+/* pythagorean_triplet
+ *
+ * PARAMETERS : int a
+ *              int b
+ *              int c
+ *
+ * RETURNS    : bool
+ *
+ * PURPOSE    : Tests whether the 3 values given form a Pythagorean Triplet.
+ *              For 3 integers a, b and c the following must hold:
+ *              a < b < c and
+ *              a^2 + b^2 = c^2
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
+ */
+bool pythagorean_triplet(int a, int b, int c);
+
 /* is_prime
  *
  * PARAMETERS : int value

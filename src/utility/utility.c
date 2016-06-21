@@ -51,6 +51,24 @@ bool is_prime(int value) {
 	return true;
 }
 
+/* pythagorean_triplet
+ *
+ * This function first tests whether a < b < c holds for the three
+ * given integers.
+ * It then tests whether a^2 + b^2 = c^2 and returns true if so.
+ */
+bool pythagorean_triplet(int a, int b, int c){
+	
+	/* local variables */
+	if (a >= b || a >= c || b >= c)
+		return false;
+	
+	if (a*a + b*b != c*c)
+		return false;
+
+	return true;
+}
+
 /* is_palindromic
  *
  * This function uses the reverse_int function to generate a digitally

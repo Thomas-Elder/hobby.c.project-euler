@@ -25,13 +25,13 @@
  *
  * FUNCTION'S SOURCE : solutions.c
  *
- * TEST CASE #: 
+ * TEST CASE #1: 
  *              PARAMETERS : int a = 3
  *                           int b = 5
  *                           int limit = 1000
  *              EXPECTED   : 233168
  *
- * TEST CASE #: 
+ * TEST CASE #2: 
  *              PARAMETERS :
  *              EXPECTED   :
  *
@@ -49,11 +49,11 @@ bool test_sum_multiples(void);
  *
  * FUNCTION'S SOURCE : solutions.c
  *
- * TEST CASE #: 
+ * TEST CASE #1: 
  *              PARAMETERS : limit = 4000000;
  *              EXPECTED   : 4613732
  *
- * TEST CASE #: 
+ * TEST CASE #2: 
  *              PARAMETERS :
  *              EXPECTED   :
  *
@@ -71,11 +71,11 @@ bool test_sum_even_fibonacci_numbers(void);
  *
  * FUNCTION'S SOURCE : solutions.c
  *
- * TEST CASE #: 
+ * TEST CASE #1: 
  *              PARAMETERS : limit = 600851475143
  *              EXPECTED   : 6857
  *
- * TEST CASE #: 
+ * TEST CASE #2: 
  *              PARAMETERS :
  *              EXPECTED   :
  *
@@ -93,11 +93,11 @@ bool test_largest_prime_factor(void);
  *
  * FUNCTION'S SOURCE : solutions.c
  *
- * TEST CASE #: 
+ * TEST CASE #1: 
  *              PARAMETERS :
  *              EXPECTED   : 906609
  *
- * TEST CASE #: 
+ * TEST CASE #2: 
  *              PARAMETERS :
  *              EXPECTED   :
  *
@@ -115,12 +115,12 @@ bool test_largest_palindrome_product(void);
  *
  * FUNCTION'S SOURCE : solutions.c
  *
- * TEST CASE #: 
+ * TEST CASE #1: 
  *              PARAMETERS : int low = 10
  *                           int high = 20
  *              EXPECTED   : 232792560
  *
- * TEST CASE #: 
+ * TEST CASE #2: 
  *              PARAMETERS :
  *              EXPECTED   :
  *
@@ -138,11 +138,11 @@ bool test_smallest_multiple(void);
  *
  * FUNCTION'S SOURCE : solutions.c
  *
- * TEST CASE #: 
+ * TEST CASE #1: 
  *              PARAMETERS : int limit = 100
  *              EXPECTED   : 232792560
  *
- * TEST CASE #: 
+ * TEST CASE #2: 
  *              PARAMETERS :
  *              EXPECTED   :
  *
@@ -160,11 +160,11 @@ bool test_sum_square_difference(void);
  *
  * FUNCTION'S SOURCE : solutions.c
  *
- * TEST CASE #: 
+ * TEST CASE #1: 
  *              PARAMETERS : int n = 10001
  *              EXPECTED   : 104743
  *
- * TEST CASE #: 
+ * TEST CASE #2: 
  *              PARAMETERS :
  *              EXPECTED   :
  *
@@ -182,19 +182,41 @@ bool test_nth_prime(void);
  *
  * FUNCTION'S SOURCE : solutions.c
  *
- * TEST CASE #: 
+ * TEST CASE #1: 
  *              PARAMETERS : char *filepath =
                 "E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt"
  *                           int product_count = 13
  *              EXPECTED   : 23514624000
  *
- * TEST CASE #: 
+ * TEST CASE #2: 
  *              PARAMETERS :
  *              EXPECTED   :
  *
  * NOTES      : Any further info, probably more about it's dev process.
  */
 bool test_largest_product_in_a_series(void);
+
+/* test_special_pythagorean_triplet
+ *
+ * PARAMETERS : void
+ *
+ * RETURNS    : bool
+ *
+ * FUCTION TESTED    : special_pythagorean_triplet()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #1: 
+ *              PARAMETERS : int n = 10001
+ *              EXPECTED   : 104743
+ *
+ * TEST CASE #2: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
+ */
+bool test_special_pythagorean_triplet(void);
 
 /* test_check_answer
  *
@@ -239,5 +261,27 @@ bool test_check_answer(int question, long long int answer);
  * NOTES      : Any further info, probably more about it's dev process.
  */
 bool test_is_prime(bool expected, int number);
+
+/* pythagorean_triplet
+ *
+ * PARAMETERS : void
+ *
+ * RETURNS    : bool
+ *
+ * FUCTION TESTED    : sum_multiples()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * TEST CASE #: 
+ *              PARAMETERS :
+ *              EXPECTED   :
+ *
+ * NOTES      : Any further info, probably more about it's dev process.
+ */
+bool test_pythagorean_triplet(bool expected, int a, int b, int c);
 
 #endif

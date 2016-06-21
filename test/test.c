@@ -36,7 +36,7 @@ int main(void)
 	results[5] = test_sum_square_difference();
 	results[6] = test_nth_prime();
 	results[7] = test_largest_product_in_a_series();
-	results[8] = 0;
+	results[8] = test_special_pythagorean_triplet();
 	results[9] = 0;
 
 	printf("\n");
@@ -89,6 +89,13 @@ int main(void)
 	if (test_is_prime(false	, 103841))
 		printf("%s\n", "correct, 103841 is not prime");
 
+	printf("%s\n", "Testing pythagorean_triplet function... ");
+
+	if (test_pythagorean_triplet(true, 3, 4, 5))
+		printf("%s\n", "correct, 3, 4, 5 is a Pythagorean Triplet");
+
+	if (test_pythagorean_triplet(false, 5, 6, 7))
+		printf("%s\n", "correct, 5, 6, 7 is not a Pythagorean Triplet");
 
 	printf("\n");
 	return 0;
@@ -224,7 +231,7 @@ bool test_nth_prime(void) {
 	return expected == result;
 }
 
-/*
+/* test_largest_product_in_a_series
  *
  */
 bool test_largest_product_in_a_series(void) {
@@ -239,6 +246,28 @@ bool test_largest_product_in_a_series(void) {
 
 	/* act */ 
 	result = largest_product_in_a_series(filepath, 13);
+
+	/* assert */
+	return expected == result;
+}
+
+/* test_special_pythagorean_triplet;
+ *
+ */
+bool test_special_pythagorean_triplet(void) {
+
+	/* arrange */
+	int limit, expected, result;
+
+	limit = 12;
+	expected = 60;
+	result = 0;
+
+	/* act */ 
+	result = special_pythagorean_triplet(limit);
+
+	printf("%s - %d\n", "The result was", result);
+	printf("%s - %d\n", "We wanted", expected);
 
 	/* assert */
 	return expected == result;
@@ -270,4 +299,16 @@ bool test_is_prime(bool expected, int number) {
 
 	/* assert */ 
 	return result == expected;
+}
+
+bool test_pythagorean_triplet(bool expected, int a, int b, int c) {
+
+	/* arrange */
+	bool result;
+
+	/* act */
+	result = pythagorean_triplet(a, b, c);
+
+	/* assert */
+	return result == expected; 
 }
