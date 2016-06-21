@@ -268,3 +268,31 @@ void problem_8() {
 	printf("%s\n", "Confirmed correct on Project Euler.");
 	printf("\n");	
 }
+
+void problem_9() {
+
+	/* local variables */
+
+  /* print title and problem */
+	printf("%s\n", "Special Pythagorean triplet");
+	printf("%s\n", "A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,");
+	printf("%s\n", "a2 + b2 = c2");
+	printf("%s\n", "For example, 32 + 42 = 9 + 16 = 25 = 52.");
+	printf("%s\n", "There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the product abc.");
+
+	/* print result */
+	printf("%s\n", "Solution not yet implemented");
+}
+
+void problem_10() {
+
+	/* local variables */
+
+  /* print title and problem */
+	printf("%s\n", "Summation of primes");
+	printf("%s\n", "The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.");
+	printf("%s\n", "Find the sum of all the primes below two million.");
+
+	/* print result */
+	printf("%s\n", "Solution not yet implemented");
+}

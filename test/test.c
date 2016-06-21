@@ -5,10 +5,11 @@
 int main(void)
 {
 	/* local variables */
+	int result_size = 10;
 	int i;
-	bool results[8];
+	bool results[result_size];
 
-	for (i = 0; i < 8; i++)
+	for (i = 0; i < result_size; i++)
 		results[i] = false;
 
 	printf("\n");
@@ -24,6 +25,8 @@ int main(void)
 	printf("%s\n", "6 - Sum square difference");
 	printf("%s\n", "7 - 10001st prime");
 	printf("%s\n", "8 - Largest product in a series");
+	printf("%s\n", "9 - Special Pythagorean triplet");
+	printf("%s\n", "10 - Summation of primes");
 
 	results[0] = test_sum_multiples();
 	results[1] = test_sum_even_fibonacci_numbers();
@@ -33,9 +36,11 @@ int main(void)
 	results[5] = test_sum_square_difference();
 	results[6] = test_nth_prime();
 	results[7] = test_largest_product_in_a_series();
+	results[8] = 0;
+	results[9] = 0;
 
 	printf("\n");
-	for (i = 0; i < 8; i++) {
+	for (i = 0; i < result_size; i++) {
 		if (results[i]) {
 			printf("Problem %d passed.\n", i + 1);
 		} else {
