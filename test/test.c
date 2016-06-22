@@ -48,6 +48,11 @@ int main(void)
 		}
 	}
 
+	printf("%s\n", "List of utility functions to test:");
+	printf("%s\n", "1 - Answer validation function");
+	printf("%s\n", "2 - Is prime function");
+	printf("%s\n", "3 - Pythagorean Triplet function");
+
 	printf("\n");
 	printf("%s\n", "Testing answer validation... ");
 
@@ -71,7 +76,8 @@ int main(void)
 		printf("%s\n", "Answer validation failed");
 	else
 		printf("%s\n", "Answer validation passed");
-
+  
+	/* */
 	printf("%s\n", "Testing is_prime function... ");
 
 	if (test_is_prime(true, 2)) 
@@ -89,6 +95,7 @@ int main(void)
 	if (test_is_prime(false	, 103841))
 		printf("%s\n", "correct, 103841 is not prime");
 
+  /* */
 	printf("%s\n", "Testing pythagorean_triplet function... ");
 
 	if (test_pythagorean_triplet(true, 3, 4, 5))
@@ -251,7 +258,7 @@ bool test_largest_product_in_a_series(void) {
 	return expected == result;
 }
 
-/* test_special_pythagorean_triplet;
+/* test_special_pythagorean_triplet
  *
  */
 bool test_special_pythagorean_triplet(void) {
@@ -273,6 +280,9 @@ bool test_special_pythagorean_triplet(void) {
 	return expected == result;
 }
 
+/* test_check_answer
+ *
+ */
 bool test_check_answer(int question, long long int answer) {
 
 	/* arrange */
@@ -288,7 +298,9 @@ bool test_check_answer(int question, long long int answer) {
 	return expected == result;
 }
 
-
+/* test_is_prime
+ *
+ */
 bool test_is_prime(bool expected, int number) {
 
 	/* arrange */
@@ -301,6 +313,9 @@ bool test_is_prime(bool expected, int number) {
 	return result == expected;
 }
 
+/* test_pythagorean_triplet
+ *
+ */
 bool test_pythagorean_triplet(bool expected, int a, int b, int c) {
 
 	/* arrange */
