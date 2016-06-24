@@ -65,7 +65,7 @@ int main(void)
 
 	printf("%s\n", "Testing question 30... ");
 
-	if (test_check_answer(30, 443839) == 1) 
+	if (test_check_answer(30, 443839) == 1) 	
 		printf("%s\n", "Answer validation failed");
 	else
 		printf("%s\n", "Answer validation passed");
@@ -103,6 +103,9 @@ int main(void)
 
 	if (test_pythagorean_triplet(false, 5, 6, 7))
 		printf("%s\n", "correct, 5, 6, 7 is not a Pythagorean Triplet");
+
+	if (test_pythagorean_triplet(false, 6, 12, 18))
+		printf("%s\n", "correct, 6, 12, 18 is not a Pythagorean Triplet");
 
 	printf("\n");
 	return 0;
