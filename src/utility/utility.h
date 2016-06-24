@@ -35,10 +35,9 @@
  *
  * PURPOSE    : Tests whether the 3 values given form a Pythagorean Triplet.
  *              For 3 integers a, b and c the following must hold:
- *              a < b < c and
- *              a^2 + b^2 = c^2
+ *              a < b < c and a^2 + b^2 = c^2
  *
- * NOTES      : Any further info, probably more about it's dev process.
+ * NOTES      : 
  */
 bool pythagorean_triplet(int a, int b, int c);
 
@@ -50,7 +49,7 @@ bool pythagorean_triplet(int a, int b, int c);
  *
  * PURPOSE    : Tests for primeness of an integer.
  *
- * NOTES      : Currently pretty unsafe and ineffecient.
+ * NOTES      : 
  */
 bool is_prime(int value);
 
@@ -86,7 +85,8 @@ int reverse_int(int value);
  *
  * RETURNS    : void
  *
- * PURPOSE    : Takes a pointer 
+ * PURPOSE    : Takes a pointer to an int and assigns the int conversion of
+ *              the input from the user.
  *
  * NOTES      :
  */
