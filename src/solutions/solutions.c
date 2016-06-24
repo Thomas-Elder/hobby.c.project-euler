@@ -91,6 +91,12 @@ int largest_prime_factor(long long int number) {
 
 /* largest_palindrome_product
  *
+ * This function loops over numbers 100 - 1000 for i and j, testing to see 
+ * if their product is palindromic. If so the product is set as the result
+ * and the loops continue until the limit is hit. 
+ *
+ * In this way the last product set as the value of result, will be the 
+ * the highest value. 
  */
 int largest_palindrome_product() {
 
