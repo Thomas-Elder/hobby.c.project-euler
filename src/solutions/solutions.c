@@ -51,11 +51,20 @@ int sum_even_fibonacci_numbers(int limit) {
 
 /* largest_prime_factor
  *
+ * This function finds the largest prime factor of the given number.
+ *
+ * Working from 3 up, going by twos to avoid even numbers, we loop for 
+ * i checking first that it divides the number without remainder, then
+ * check for primeness. 
+ *
+ * If the value of i is both a factor and prime, it is saved as the 
+ * result, and the loop continues. In this way the last value saved 
+ * as the result will be the highest value. 
  */
 int largest_prime_factor(long long int number) {
 
 	/* local variables */
-	int factor, limit, i;
+	int result, limit, i;
 	double square_root;
 
 
@@ -67,7 +76,7 @@ int largest_prime_factor(long long int number) {
 	 * repeating the smaller factors. */
 	square_root = sqrt(number);
 	limit = floor(square_root);
-	factor = 1;
+	result = 1;
 
 	/* Now we loop over integers from 3 up, checking first to see if they are
 	 * a factor of our number, then checking for primeness. We can discard even
@@ -81,12 +90,12 @@ int largest_prime_factor(long long int number) {
 			 * factor var. It will always be the largest as we're working
 			 * in ascending order */
 			if (is_prime(i)) {
-				factor = i;
+				result = i;
 			}
 		}
 	}
 
-	return factor;
+	return result;
 }
 
 /* largest_palindrome_product
