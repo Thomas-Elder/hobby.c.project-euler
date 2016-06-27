@@ -195,6 +195,19 @@ int smallest_multiple(int low, int high) {
 
 /* sum_square_difference
  *
+ * This function returns the difference between the square of the sum  
+ * and the sum of the squares, of the natural numbers up to the limit. 
+ *
+ * We loop over i from 1 to the limit (inclusive) and keep a running total
+ * of two things. One we add the square of i to the sumsquare variable, to 
+ * give us the value of the sum of the squares of this sequence. Secondly
+ * we simply add i to the squaresum variable, for squaring once the loop
+ * is complete. 
+ * 
+ * Once we've hit the limit we square the squaresum variable, to get the
+ * square of the sum of this sequence. 
+ *
+ * Then we return the difference between squaresum and sumsquare.
  */
 int sum_square_difference(int limit) {
 
