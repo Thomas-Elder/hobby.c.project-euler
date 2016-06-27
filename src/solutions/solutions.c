@@ -4,6 +4,13 @@
 
 /* sum_multiples
  * 
+ * This function returns the sum of the multiples of a and b, 
+ * which are less than the limit. 
+ *
+ * We iterate over i from 1 to the limit (exclusive), and add it 
+ * to the sum if it is evenly divisible by a or b. 
+ *
+ * Once i is greater than the limit the sum is returned. 
  */
 int sum_multiples(int a, int b, int limit) {
 
