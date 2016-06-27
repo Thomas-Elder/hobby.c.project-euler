@@ -147,6 +147,27 @@ int largest_palindrome_product() {
 
 /* smallest_multiple
  *
+ * This function returns the smallest positive number which is divisible 
+ * by all numbers between (inclusive) low and high. 
+ *
+ * This is currently gamed a bit. The Project Euler example gives us the 
+ * smallest number divisible by the numbers 1-10 as 2520. The problem given
+ * is to find the smallest number divisible by the numbers 1-20, so I used
+ * the example to shorten the runtime a bit, by starting at 2520, and 
+ * incrementing by 2520, as adding any number less than 2520 to a multiple
+ * of 2520 would give a number not divisible by some number 1-10. 
+ *
+ * So for each number i > 2520 and a multiple of 2520, and j equal to the higher 
+ * limit, we check if j divides the number evenly, if not we break immediately 
+ * from the inner loop. For example if we had j = 20, and the number i was not
+ * divisible by 20, there would be no need to check j = 19, so we break.
+ *
+ * If i is divisible by j, we decrement j and test again. In this manner we 
+ * check each value of j from high to low, until j == low, at which point we 
+ * know that all numbers between low and high divide the number i without
+ * remainder and we can return the number i as the result. 
+ *
+ * Would be good to re-write this soon to be a bit more generic. 
  */
 int smallest_multiple(int low, int high) {
 
