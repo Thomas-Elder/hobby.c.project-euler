@@ -25,6 +25,16 @@ int sum_multiples(int a, int b, int limit) {
 
 /* even_fibonacci_numbers
  *
+ * This function sums the even numbers in the Fibonacci sequence 
+ * up to some limit.
+ *
+ * This one is pretty straight forward, we step through the sequence
+ * using 3 variables to keep track of the 2 previous numbers in the 
+ * sequence, and the current one. We test each current value for 
+ * evenness, then add it to the sum if it is. 
+ *
+ * sum is then returned once value of the current element in the 
+ * sequence exceeds the limit value.
  */
 int sum_even_fibonacci_numbers(int limit) {
 
