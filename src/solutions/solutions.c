@@ -231,6 +231,11 @@ int sum_square_difference(int limit) {
 
 /* ten_thousand_and_first_prime
  *
+ * This function returns the 10001st prime number. It does this by testing
+ * incrementing values of i for primeness and increasing a counter variable
+ * for each number found to be prime. 
+ * 
+ * Once the counter has met the target limit 'n', we return the value of i.
  */
 int nth_prime(int n) {
 
@@ -239,16 +244,16 @@ int nth_prime(int n) {
 
 	/* initilise */
 	count = 1;
-	i = 2;
+	i = 1;
 
 	/* go */
-	while (count != n + 1) {
+	while (count <= n) {
 
-		if (is_prime(i++))
+		if (is_prime(++i))
 			count++;
 	}
 
-	return i - 1;
+	return i;
 }
 
 /* largest_product_in_a_series
