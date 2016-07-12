@@ -3,3 +3,4 @@
 *.sublime-workspace
 doc/html/
 doc/latex/
+.vscode/
