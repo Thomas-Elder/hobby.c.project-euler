@@ -328,6 +328,16 @@ long long int largest_product_in_a_series(char *filepath, int product_count) {
 
 /* special_pythagorean_triplet
  *
+ * This function returns the product of 3 integers who form a Pythagorean Triplet, 
+ * and whose sum is equal to 1000. 
+ *
+ * Currently this is failing.
+ *
+ * But the idea is to start from a=4, b=5, c=6. Then iterating over increasing values
+ * for each, first check if they form a Pythagorean Triplet, then if their sum equals
+ * the limit value, then finally save their product in result.
+ *
+ * Then return result.
  */
 int special_pythagorean_triplet(int limit) {
 	/* local variables */
