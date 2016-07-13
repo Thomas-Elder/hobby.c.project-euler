@@ -54,6 +54,7 @@ int sum_even_fibonacci_numbers(int limit) {
 	pprev = 0;
 	curr = 1;
 
+	/* */
 	while(curr < limit) {
 		pprev = prev;
 		prev = curr;
