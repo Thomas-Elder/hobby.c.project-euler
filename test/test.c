@@ -7,11 +7,11 @@ int main(void)
 	/* local variables */
 	int total_test_cases;
 	int total_tests_passed;
-	int pass;
+	int passed;
 
 	total_test_cases = 4;
 	total_tests_passed = 0;
-	pass = 0;
+	passed = 0;
 
 	printf("%s\n", "");
 	printf("%s\n", "T E S T I N G");
@@ -19,12 +19,12 @@ int main(void)
 
 	/* Testing sum_multiples function */
 	printf("%s\n", "Testing sum_multiples function... ");
-	pass = sum_multiples_all_tests();
-	printf("%s%d\n", "Tests out of 4 passed: ", pass);
+	passed = sum_multiples_all_tests();
+	printf("%s%d\n", "Tests out of 4 passed: ", passed);
 	printf("%s\n", "Testing sum_multiples complete.");
 	printf("%s\n", "");
 
-	total_tests_passed += pass;
+	total_tests_passed += passed;
 
 	/* Testing other functions */
 
@@ -36,6 +36,9 @@ int main(void)
 	return 0;
 }
 
+/* sum_multiples_all_tests
+ *
+ */
 int sum_multiples_all_tests(void){
 
 	/* local variables */
@@ -68,7 +71,7 @@ int sum_multiples_all_tests(void){
 	}
 
 	/* test 3 */
-	expected = 76;
+	expected = 64;
 	result = sum_multiples(4, 6, 20);
 
 	if (result != expected) {
@@ -79,7 +82,7 @@ int sum_multiples_all_tests(void){
 	}
 
 	/* test 4 */
-	expected = 126;
+	expected = 105;
 	result = sum_multiples(3, 7, 23);
 
 	if (result != expected) {

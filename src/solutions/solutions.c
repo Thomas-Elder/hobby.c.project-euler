@@ -22,9 +22,9 @@ int sum_multiples(int a, int b, int limit) {
 
 	/* */
 	for (i = 1; i < limit; i++) {
-		if (i % a == 0 || i % b == 0) {
+
+		if (i % a == 0 || i % b == 0)
 			sum += i;
-		}
 	}
 
 	return sum;
