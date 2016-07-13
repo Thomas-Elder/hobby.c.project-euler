@@ -62,7 +62,6 @@ bool is_prime(int value) {
  */
 bool pythagorean_triplet(int a, int b, int c){
 	
-	/* local variables */
 	if (a >= b || a >= c || b >= c)
 		return false;
 	

@@ -13,275 +13,59 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+/* colours for highlighting test results */
+#define ANSI_COLOR_RED     "\x1b[31m"
+#define ANSI_COLOR_GREEN   "\x1b[32m"
+#define ANSI_COLOR_YELLOW  "\x1b[33m"
+#define ANSI_COLOR_BLUE    "\x1b[34m"
+#define ANSI_COLOR_MAGENTA "\x1b[35m"
+#define ANSI_COLOR_CYAN    "\x1b[36m"
+#define ANSI_COLOR_RESET   "\x1b[0m"
+
 /* prototypes */
 
-/* test_sum_multiples
+/* sum_multiples_all_tests
  *
- * PARAMETERS : void
+ * PARAMETERS        : void
  *
- * RETURNS    : bool
+ * RETURNS           : int
+ *                     An integer from 0-4, indicating how many
+ *                     of the 4 test cases were passed. 
  *
  * FUCTION TESTED    : sum_multiples()
  *
  * FUNCTION'S SOURCE : solutions.c
  *
+ * FUNCTION TEST     : sum_multiples_test()
+ *
  * TEST CASE #1: 
+ * The Project Euler example values.
  *              PARAMETERS : int a = 3
  *                           int b = 5
- *                           int limit = 1000
+ *                           int limit = 10
+ *              EXPECTED   : 23
+ *
+ * TEST CASE #2:
+ * The actual Project Euler problem values. 
+ *              PARAMETERS :int a = 3
+ *                          int b = 5
+ *                          int limit = 1000
  *              EXPECTED   : 233168
  *
- * TEST CASE #2: 
- *              PARAMETERS :
- *              EXPECTED   :
+ * TEST CASE #3: 
+ *              PARAMETERS :int a = 4
+ *                          int b = 6
+ *                          int limit = 20
+ *              EXPECTED   : 76
  *
- * NOTES      : Any further info, probably more about it's dev process.
+ * TEST CASE #4: 
+ *              PARAMETERS :int a = 3
+ *                          int b = 7
+ *                          int limit = 23
+ *              EXPECTED   : 126
+ *
+ * NOTES      : 
  */
-bool test_sum_multiples(void);
-
-/* test_sum_even_fibonacci_numbers
- *
- * PARAMETERS : void
- *
- * RETURNS    : bool
- *
- * FUCTION TESTED    : sum_even_fibonacci_numbers()
- *
- * FUNCTION'S SOURCE : solutions.c
- *
- * TEST CASE #1: 
- *              PARAMETERS : limit = 4000000;
- *              EXPECTED   : 4613732
- *
- * TEST CASE #2: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * NOTES      : Any further info, probably more about it's dev process.
- */
-bool test_sum_even_fibonacci_numbers(void);
-
-/* test_largest_prime_factor
- *
- * PARAMETERS : void
- *
- * RETURNS    : bool
- *
- * FUCTION TESTED    : largest_prime_factor()
- *
- * FUNCTION'S SOURCE : solutions.c
- *
- * TEST CASE #1: 
- *              PARAMETERS : limit = 600851475143
- *              EXPECTED   : 6857
- *
- * TEST CASE #2: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * NOTES      : Any further info, probably more about it's dev process.
- */
-bool test_largest_prime_factor(void);
-
-/* test_largest_palindrome_product
- *
- * PARAMETERS : void
- *
- * RETURNS    : bool
- *
- * FUCTION TESTED    : largest_palindrome_product()
- *
- * FUNCTION'S SOURCE : solutions.c
- *
- * TEST CASE #1: 
- *              PARAMETERS :
- *              EXPECTED   : 906609
- *
- * TEST CASE #2: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * NOTES      : Any further info, probably more about it's dev process.
- */
-bool test_largest_palindrome_product(void);
-
-/* test_smallest_multiple
- *
- * PARAMETERS : void
- *
- * RETURNS    : bool
- *
- * FUCTION TESTED    : smallest_multiple()
- *
- * FUNCTION'S SOURCE : solutions.c
- *
- * TEST CASE #1: 
- *              PARAMETERS : int low = 10
- *                           int high = 20
- *              EXPECTED   : 232792560
- *
- * TEST CASE #2: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * NOTES      : Any further info, probably more about it's dev process.
- */
-bool test_smallest_multiple(void);
-
-/* test_sum_square_difference
- *
- * PARAMETERS : void
- *
- * RETURNS    : bool
- *
- * FUCTION TESTED    : sum_square_difference()
- *
- * FUNCTION'S SOURCE : solutions.c
- *
- * TEST CASE #1: 
- *              PARAMETERS : int limit = 100
- *              EXPECTED   : 232792560
- *
- * TEST CASE #2: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * NOTES      : Any further info, probably more about it's dev process.
- */
-bool test_sum_square_difference(void);
-
-/* test_nth_prime
- *
- * PARAMETERS : void
- *
- * RETURNS    : bool
- *
- * FUCTION TESTED    : nth_prime()
- *
- * FUNCTION'S SOURCE : solutions.c
- *
- * TEST CASE #1: 
- *              PARAMETERS : int n = 10001
- *              EXPECTED   : 104743
- *
- * TEST CASE #2: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * NOTES      : Any further info, probably more about it's dev process.
- */
-bool test_nth_prime(void);
-
-/* test_largest_product_in_a_series
- *
- * PARAMETERS : void
- *
- * RETURNS    : bool
- *
- * FUCTION TESTED    : largest_product_in_a_series()
- *
- * FUNCTION'S SOURCE : solutions.c
- *
- * TEST CASE #1: 
- *              PARAMETERS : char *filepath =
-                "E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt"
- *                           int product_count = 13
- *              EXPECTED   : 23514624000
- *
- * TEST CASE #2: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * NOTES      : Any further info, probably more about it's dev process.
- */
-bool test_largest_product_in_a_series(void);
-
-/* test_special_pythagorean_triplet
- *
- * PARAMETERS : void
- *
- * RETURNS    : bool
- *
- * FUCTION TESTED    : special_pythagorean_triplet()
- *
- * FUNCTION'S SOURCE : solutions.c
- *
- * TEST CASE #1: 
- *              PARAMETERS : int n = 10001
- *              EXPECTED   : 104743
- *
- * TEST CASE #2: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * NOTES      : Any further info, probably more about it's dev process.
- */
-bool test_special_pythagorean_triplet(void);
-
-/* test_check_answer
- *
- * PARAMETERS : void
- *
- * RETURNS    : bool
- *
- * FUCTION TESTED    : check_answer()
- *
- * FUNCTION'S SOURCE : utility.c
- *
- * TEST CASE #: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * TEST CASE #: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * NOTES      : Any further info, probably more about it's dev process.
- */
-bool test_check_answer(int question, long long int answer);
-
-/* test_is_prime
- *
- * PARAMETERS : void
- *
- * RETURNS    : bool
- *
- * FUCTION TESTED    : is_prime()
- *
- * FUNCTION'S SOURCE : utility.c
- *
- * TEST CASE #: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * TEST CASE #: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * NOTES      : Any further info, probably more about it's dev process.
- */
-bool test_is_prime(bool expected, int number);
-
-/* pythagorean_triplet
- *
- * PARAMETERS : void
- *
- * RETURNS    : bool
- *
- * FUCTION TESTED    : sum_multiples()
- *
- * FUNCTION'S SOURCE : solutions.c
- *
- * TEST CASE #: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * TEST CASE #: 
- *              PARAMETERS :
- *              EXPECTED   :
- *
- * NOTES      : Any further info, probably more about it's dev process.
- */
-bool test_pythagorean_triplet(bool expected, int a, int b, int c);
+int sum_multiples_all_tests(void);
 
 #endif
