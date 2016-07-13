@@ -258,6 +258,26 @@ int nth_prime(int n) {
 
 /* largest_product_in_a_series
  *
+ * This function returns the largest product of a specified number of consecutive
+ * integers in a series of integers. These are expected to be in some file (path
+ * is a parameter), contain no data other than the integers in the series to be 
+ * parsed.
+ *
+ * Currently a 1000 length series is expected and that value is hardcoded into the
+ * the function.
+ *
+ * We consider 13 sequential digits in turn, checking their product and saving it
+ * in 'result' if it is higher than previous products. So we maintain two integer values 'start'
+ * and 'end' which refer to the first and last index of the range we're currently 
+ * examining.
+ * 
+ * We then loop over the indecies from start to end, multiplying each value to get
+ * the product. If that product is higher than the current 'result', then we set
+ * the result to that value.
+ *
+ * Then start and end are incremented to examine the next sequence of digits.
+ *
+ * Finally we return the value of 'result'.
  */
 long long int largest_product_in_a_series(char *filepath, int product_count) {
 
