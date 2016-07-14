@@ -56,12 +56,13 @@ int sum_even_fibonacci_numbers(int limit) {
 
 	/* */
 	while(curr < limit) {
-		pprev = prev;
-		prev = curr;
-		curr = prev + pprev;
 
 		if (curr % 2 == 0)
 			sum += curr;
+
+		pprev = prev;
+		prev = curr;
+		curr = prev + pprev;
 	}
 	
 	return sum;
