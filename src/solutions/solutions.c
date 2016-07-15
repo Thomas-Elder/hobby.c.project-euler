@@ -237,9 +237,9 @@ int sum_square_difference(int limit) {
 	return squaresum - sumsquare;
 }
 
-/* ten_thousand_and_first_prime
+/* nth_prime
  *
- * This function returns the 10001st prime number. It does this by testing
+ * This function returns the nth prime number. It does this by testing
  * incrementing values of i for primeness and increasing a counter variable
  * for each number found to be prime. 
  * 
