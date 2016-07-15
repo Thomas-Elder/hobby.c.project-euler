@@ -132,4 +132,107 @@ int sum_even_fibonacci_numbers_all_tests(void);
  * NOTES      : 
  */
 int largest_prime_factor_all_tests(void);
+
+/* largest_palindrome_product_all_tests
+ *
+ * PARAMETERS        : void
+ *
+ * RETURNS           : int
+ *                     An integer from 0-4, indicating how many
+ *                     of the 4 test cases were passed. 
+ *
+ * FUCTION TESTED    : largest_palindrome_product()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #1:
+ * The Project Euler example values. 
+ *              PARAMETERS : 
+ *              EXPECTED   : 
+ *
+ * TEST CASE #2:
+ * The actual Project Euler problem value.
+ *              PARAMETERS : 
+ *              EXPECTED   : 
+ *
+ * TEST CASE #3: 
+ *              PARAMETERS : 
+ *              EXPECTED   : 
+ *
+ * TEST CASE #4: 
+ *              PARAMETERS : 
+ *              EXPECTED   : 
+ *
+ * NOTES       : Currently largest_palindrome_product() doesn't accept any
+ *               parameters, so I can only test the one case, ie the actual
+ *               Project Euler problem.
+ *
+ *               For now this will return 4 if that one test passes. 
+ */
+int largest_palindrome_product_all_tests(void);
+
+/* is_palindrome_all_tests
+ *
+ * PARAMETERS        : void
+ *
+ * RETURNS           : int
+ *                     An integer from 0-4, indicating how many
+ *                     of the 4 test cases were passed. 
+ *
+ * FUCTION TESTED    : is_palindrome()
+ *
+ * FUNCTION'S SOURCE : utility.c
+ *
+ * TEST CASE #1:
+ *              PARAMETERS : int value = 999
+ *              EXPECTED   : true
+ *
+ * TEST CASE #2:
+ *              PARAMETERS : long long int value = 660066
+ *              EXPECTED   : true
+ *
+ * TEST CASE #3: 
+ *              PARAMETERS : long long int value = 66006
+ *              EXPECTED   : false
+ *
+ * TEST CASE #4: 
+ *              PARAMETERS : long long int value = 1111112
+ *              EXPECTED   : false
+ *
+ * NOTES      : 
+ */
+int is_palindrome_all_tests(void);
+
+/* reverse_int_all_tests
+ *
+ * PARAMETERS        : void
+ *
+ * RETURNS           : int
+ *                     An integer from 0-4, indicating how many
+ *                     of the 4 test cases were passed. 
+ *
+ * FUCTION TESTED    : reverse_int()
+ *
+ * FUNCTION'S SOURCE : utility.c
+ *
+ * TEST CASE #1:
+ *              PARAMETERS : int value = 999
+ *              EXPECTED   : true
+ *
+ * TEST CASE #2:
+ *              PARAMETERS : long long int value = 660066
+ *              EXPECTED   : true
+ *
+ * TEST CASE #3: 
+ *              PARAMETERS : long long int value = 66006
+ *              EXPECTED   : false
+ *
+ * TEST CASE #4: 
+ *              PARAMETERS : long long int value = 1111112
+ *              EXPECTED   : false
+ *
+ * NOTES      : Might be unnecessary, I think I refactor out the reverse_int function.
+ */
+int reverse_int_all_tests(void);
+
 #endif
