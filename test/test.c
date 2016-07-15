@@ -9,7 +9,7 @@ int main(void)
 	int total_tests_passed;
 	int passed;
 
-	total_test_cases = 8;
+	total_test_cases = 12;
 	total_tests_passed = 0;
 	passed = 0;
 
@@ -31,6 +31,15 @@ int main(void)
 	passed = sum_even_fibonacci_numbers_all_tests();
 	printf("%s%d\n", "Tests out of 4 passed: ", passed);
 	printf("%s\n", "Testing sum_even_fibonacci_numbers complete.");
+	printf("%s\n", "");
+
+	total_tests_passed += passed;
+
+	/* Testing largest_prime_factor_all_tests function */
+	printf("%s\n", "Testing largest_prime_factor function... ");
+	passed = largest_prime_factor_all_tests();
+	printf("%s%d\n", "Tests out of 4 passed: ", passed);
+	printf("%s\n", "Testing largest_prime_factor complete.");
 	printf("%s\n", "");
 
 	total_tests_passed += passed;
@@ -152,6 +161,65 @@ int sum_even_fibonacci_numbers_all_tests(void) {
 	/* test 4 */
 	expected = 798;
 	result = sum_even_fibonacci_numbers(1000);
+
+	if (result != expected) {
+		printf("%s\n", "Test 4 Failed!");
+		printf("%s%d%s%d\n", "Expected: ", expected, ". Result: ", result);
+	} else {
+		tests_passed++;
+	}
+
+	return tests_passed;
+}
+
+/* largest_prime_factor_all_tests
+ *
+ */
+int largest_prime_factor_all_tests(void) {
+
+	/* local variables */
+	int tests_passed;
+	int expected;
+	int result;
+
+	tests_passed = 0;
+
+	/* test 1 */
+	expected = 29;
+	result = largest_prime_factor(13195);
+
+	if (result != expected) {
+		printf("%s\n", "Test 1 Failed!");
+		printf("%s%d%s%d\n", "Expected: ", expected, ". Result: ", result);
+	} else {
+		tests_passed++;
+	}
+
+	/* test 2 */
+	expected = 6857;
+	result = largest_prime_factor(600851475143);
+
+	if (result != expected) {
+		printf("%s\n", "Test 2 Failed!");
+		printf("%s%d%s%d\n", "Expected: ", expected, ". Result: ", result);
+	} else {
+		tests_passed++;
+	}
+
+	/* test 3 */
+	expected =167;
+	result = largest_prime_factor(334);
+
+	if (result != expected) {
+		printf("%s\n", "Test 3 Failed!");
+		printf("%s%d%s%d\n", "Expected: ", expected, ". Result: ", result);
+	} else {
+		tests_passed++;
+	}
+
+	/* test 4 */
+	expected = 7;
+	result = largest_prime_factor(5040);
 
 	if (result != expected) {
 		printf("%s\n", "Test 4 Failed!");

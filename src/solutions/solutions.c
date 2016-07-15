@@ -83,7 +83,7 @@ int sum_even_fibonacci_numbers(int limit) {
 int largest_prime_factor(long long int number) {
 
 	/* local variables */
-	int result, limit, i;
+	int result, limit, i, m;
 	double square_root;
 
 
@@ -97,19 +97,25 @@ int largest_prime_factor(long long int number) {
 	limit = floor(square_root);
 	result = 1;
 
-	/* Now we loop over integers from 3 up, checking first to see if they are
-	 * a factor of our number, then checking for primeness. We can discard even
-	 * numbers straight up. */
-	for (i = 3; i < limit; i += 2) {
+	for (i = 2; i < limit; i++) {
 
 		/* We first check if i is a factor of the number */ 
 		if (number % i == 0) {
 
-			/* Then check if the number is prime, then assign it to the 
-			 * factor var. It will always be the largest as we're working
-			 * in ascending order */
-			if (is_prime(i)) {
-				result = i;
+			/* Next we'll find the multiplicand of i */
+			m = number / i;
+
+			/* Then we check i and m first if they're greater than the current
+			 * result, then for primeness, then set result to that value.  
+			 */
+			if (i > result) {
+				if (is_prime(i))
+					result = i;
+			}
+
+			if (m > result) {
+				if (is_prime(m))
+					result = m;
 			}
 		}
 	}

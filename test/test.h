@@ -99,4 +99,37 @@ int sum_multiples_all_tests(void);
  */
 int sum_even_fibonacci_numbers_all_tests(void);
 
+/* largest_prime_factor_all_tests
+ *
+ * PARAMETERS        : void
+ *
+ * RETURNS           : int
+ *                     An integer from 0-4, indicating how many
+ *                     of the 4 test cases were passed. 
+ *
+ * FUCTION TESTED    : largest_prime_factor()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #1:
+ * The Project Euler example values. 
+ *              PARAMETERS : long long int number = 13195
+ *              EXPECTED   : 29
+ *
+ * TEST CASE #2:
+ * The actual Project Euler problem value.
+ *              PARAMETERS : long long int number = 600851475143
+ *              EXPECTED   : 6857
+ *
+ * TEST CASE #3: 
+ *              PARAMETERS : long long int number = 501
+ *              EXPECTED   : 167
+ *
+ * TEST CASE #4: 
+ *              PARAMETERS : long long int number = 5040
+ *              EXPECTED   : 7
+ *
+ * NOTES      : 
+ */
+int largest_prime_factor_all_tests(void);
 #endif
