@@ -73,29 +73,11 @@ bool pythagorean_triplet(int a, int b, int c){
 
 /* is_palindromic
  *
- * This function uses the reverse_int function to generate a digitally
+ * This function uses the modulo arithmetic to generate a digitally
  * reversed version of the value passed. It then checks if they are
  * equivalent and returns true if so.
  */
 bool is_palindrome(int value) {
-
-	/* local variables */
-	int reverse;
-
-	reverse = reverse_int(value);
-
-	if (value == reverse) 
-		return true;
-
-	return false;
-}
-
-/* reverse_int
- *
- * This function uses modulo arithmetic to return an integer with it's digits
- * in reverse order to the value passed.
- */
-int reverse_int(int value) {
 
 	/* local variables */
 	int forward, reverse, remain;
@@ -109,7 +91,10 @@ int reverse_int(int value) {
 		forward = forward / 10;
 	}
 
-	return reverse;
+	if (value == reverse) 
+		return true;
+
+	return false;
 }
 
 /* read_rest_of_line
