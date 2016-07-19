@@ -331,6 +331,8 @@ long long int largest_product_in_a_series(char *filepath, int product_count) {
 		}
 	}
 
+	fclose(fp);
+
 	return result;
 }
 

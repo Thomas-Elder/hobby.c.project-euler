@@ -152,6 +152,39 @@ int largest_prime_factor_all_tests(void);
  */
 int largest_palindrome_product_all_tests(void);
 
+/* sum_even_fibonacci_numbers_all_tests
+ *
+ * PARAMETERS        : void
+ *
+ * RETURNS           : int
+ *                     An integer from 0-4, indicating how many
+ *                     of the 4 test cases were passed. 
+ *
+ * FUCTION TESTED    : sum_even_fibonacci_numbers()
+ *
+ * FUNCTION'S SOURCE : solutions.c
+ *
+ * TEST CASE #1:
+ * The Project Euler example values. 
+ *              PARAMETERS : 
+ *              EXPECTED   : 
+ *
+ * TEST CASE #2:
+ * The actual Project Euler problem value.
+ *              PARAMETERS : 
+ *              EXPECTED   : 
+ *
+ * TEST CASE #3: 
+ *              PARAMETERS : 
+ *              EXPECTED   : 
+ *
+ * TEST CASE #4: 
+ *              PARAMETERS : 
+ *              EXPECTED   : 
+ *
+ * NOTES       : 
+ *                
+ */
 int sum_even_fibonacci_numbers_all_tests(void);
 
 /* smallest_multiple_all_tests
@@ -168,27 +201,31 @@ int sum_even_fibonacci_numbers_all_tests(void);
  *
  * TEST CASE #1:
  * The Project Euler example values. 
- *              PARAMETERS : long long int number = 13195
- *              EXPECTED   : 29
+ *              PARAMETERS : int low = 1
+ *                           int high = 10
+ *              EXPECTED   : 2520
  *
  * TEST CASE #2:
  * The actual Project Euler problem value.
- *              PARAMETERS : long long int number = 600851475143
- *              EXPECTED   : 6857
+ *              PARAMETERS : int low = 1
+ *                           int high = 20
+ *              EXPECTED   : 232792560
  *
  * TEST CASE #3: 
- *              PARAMETERS : long long int number = 501
- *              EXPECTED   : 167
+ *              PARAMETERS : int low = 1
+ *                           int high = 5
+ *              EXPECTED   : 
  *
  * TEST CASE #4: 
- *              PARAMETERS : long long int number = 5040
- *              EXPECTED   : 7
+ *              PARAMETERS : int low = 1
+ *                           int high = 7
+ *              EXPECTED   : 
  *
  * NOTES      : 
  */
 int smallest_multiple_all_tests(void);
 
-/* smallest_multiple_all_tests
+/* sum_square_difference_all_tests
  *
  * PARAMETERS        : void
  *
@@ -196,27 +233,27 @@ int smallest_multiple_all_tests(void);
  *                     An integer from 0-4, indicating how many
  *                     of the 4 test cases were passed. 
  *
- * FUCTION TESTED    : smallest_multiple()
+ * FUCTION TESTED    : sum_square_difference()
  *
  * FUNCTION'S SOURCE : solutions.c
  *
  * TEST CASE #1:
  * The Project Euler example values. 
- *              PARAMETERS : long long int number = 13195
- *              EXPECTED   : 29
+ *              PARAMETERS : int limit = 10
+ *              EXPECTED   : 2640
  *
  * TEST CASE #2:
  * The actual Project Euler problem value.
- *              PARAMETERS : long long int number = 600851475143
- *              EXPECTED   : 6857
+ *              PARAMETERS : int limit = 100
+ *              EXPECTED   : 25164150
  *
  * TEST CASE #3: 
- *              PARAMETERS : long long int number = 501
- *              EXPECTED   : 167
+ *              PARAMETERS : int limit = 5
+ *              EXPECTED   : 170
  *
  * TEST CASE #4: 
- *              PARAMETERS : long long int number = 5040
- *              EXPECTED   : 7
+ *              PARAMETERS : int limit = 2
+ *              EXPECTED   : 4
  *
  * NOTES      : 
  */
@@ -236,21 +273,21 @@ int sum_square_difference_all_tests(void);
  *
  * TEST CASE #1:
  * The Project Euler example values. 
- *              PARAMETERS : long long int number = 13195
- *              EXPECTED   : 29
+ *              PARAMETERS : int n = 6
+ *              EXPECTED   : 13
  *
  * TEST CASE #2:
  * The actual Project Euler problem value.
- *              PARAMETERS : long long int number = 600851475143
- *              EXPECTED   : 6857
+ *              PARAMETERS : int n = 10 001
+ *              EXPECTED   : 104743
  *
  * TEST CASE #3: 
- *              PARAMETERS : long long int number = 501
- *              EXPECTED   : 167
+ *              PARAMETERS : int n = 3
+ *              EXPECTED   : 5
  *
  * TEST CASE #4: 
- *              PARAMETERS : long long int number = 5040
- *              EXPECTED   : 7
+ *              PARAMETERS : int n = 8
+ *              EXPECTED   : 19
  *
  * NOTES      : 
  */
@@ -270,21 +307,25 @@ int nth_prime_all_tests(void);
  *
  * TEST CASE #1:
  * The Project Euler example values. 
- *              PARAMETERS : long long int number = 13195
- *              EXPECTED   : 29
+ *              PARAMETERS : char *filepath = "E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt"
+ *                           int product_count = 4
+ *              EXPECTED   : 5832
  *
  * TEST CASE #2:
  * The actual Project Euler problem value.
- *              PARAMETERS : long long int number = 600851475143
- *              EXPECTED   : 6857
+ *              PARAMETERS : char *filepath = "E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt"
+ *                           int product_count = 13
+ *              EXPECTED   : 23514624000
  *
  * TEST CASE #3: 
- *              PARAMETERS : long long int number = 501
- *              EXPECTED   : 167
+ *              PARAMETERS : char *filepath = "E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt"
+ *                           int product_count = 1
+ *              EXPECTED   : 9 
  *
  * TEST CASE #4: 
- *              PARAMETERS : long long int number = 5040
- *              EXPECTED   : 7
+ *              PARAMETERS : char *filepath = "E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt"
+ *                           int product_count = 2
+ *              EXPECTED   : 81
  *
  * NOTES      : 
  */
@@ -303,24 +344,13 @@ int largest_product_in_a_series_all_tests(void);
  * FUNCTION'S SOURCE : solutions.c
  *
  * TEST CASE #1:
- * The Project Euler example values. 
- *              PARAMETERS : long long int number = 13195
- *              EXPECTED   : 29
- *
- * TEST CASE #2:
  * The actual Project Euler problem value.
- *              PARAMETERS : long long int number = 600851475143
- *              EXPECTED   : 6857
+ *              PARAMETERS : int limit = 1000
+ *              EXPECTED   : 31875000
  *
- * TEST CASE #3: 
- *              PARAMETERS : long long int number = 501
- *              EXPECTED   : 167
- *
- * TEST CASE #4: 
- *              PARAMETERS : long long int number = 5040
- *              EXPECTED   : 7
- *
- * NOTES      : 
+ * NOTES      : Not sure there's a good way to rewrite the function
+ *              to be able to take different values for the limit. There is
+ *              apparently only one set of values which fulfil the requirements.
  */
 int special_pythagorean_triplet_all_tests(void);
 

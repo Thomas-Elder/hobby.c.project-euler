@@ -9,7 +9,7 @@ int main(void)
 	int total_tests_passed;
 	int passed;
 
-	total_test_cases = 21;
+	total_test_cases = 38;
 	total_tests_passed = 0;
 	passed = 0;
 
@@ -52,6 +52,51 @@ int main(void)
 	passed = largest_palindrome_product_all_tests();
 	printf("%s%d\n", "Tests out of 1 passed: ", passed);
 	printf("%s\n", "Testing largest_palindrome_product complete.");
+	printf("%s\n", "");
+
+	total_tests_passed += passed;
+
+	/* Testing smallest_multiple function */
+	printf("%s\n", "Testing smallest_multiple function... ");
+	passed = smallest_multiple_all_tests();
+	printf("%s%d\n", "Tests out of 4 passed: ", passed);
+	printf("%s\n", "Testing smallest_multiple complete.");
+	printf("%s\n", "");
+
+	total_tests_passed += passed;
+
+	/* Testing sum_square_difference function */
+	printf("%s\n", "Testing sum_square_difference function... ");
+	passed = sum_square_difference_all_tests();
+	printf("%s%d\n", "Tests out of 4 passed: ", passed);
+	printf("%s\n", "Testing sum_square_difference complete.");
+	printf("%s\n", "");
+
+	total_tests_passed += passed;
+
+	/* Testing nth_prime function */
+	printf("%s\n", "Testing nth_prime function... ");
+	passed = nth_prime_all_tests();
+	printf("%s%d\n", "Tests out of 4 passed: ", passed);
+	printf("%s\n", "Testing nth_prime complete.");
+	printf("%s\n", "");
+
+	total_tests_passed += passed;
+
+	/* Testing largest_product_in_a_series function */
+	printf("%s\n", "Testing largest_product_in_a_series function... ");
+	passed = largest_product_in_a_series_all_tests();
+	printf("%s%d\n", "Tests out of 4 passed: ", passed);
+	printf("%s\n", "Testing largest_product_in_a_series complete.");
+	printf("%s\n", "");
+
+	total_tests_passed += passed;
+
+	/* Testing special_pythagorean_triplet function */
+	printf("%s\n", "Testing special_pythagorean_triplet function... ");
+	passed = special_pythagorean_triplet_all_tests();
+	printf("%s%d\n", "Tests out of 1 passed: ", passed);
+	printf("%s\n", "Testing special_pythagorean_triplet complete.");
 	printf("%s\n", "");
 
 	total_tests_passed += passed;
