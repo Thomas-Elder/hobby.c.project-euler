@@ -9,7 +9,7 @@ int main(void)
 	int total_tests_passed;
 	int passed;
 
-	total_test_cases = 38;
+	total_test_cases = 42;
 	total_tests_passed = 0;
 	passed = 0;
 
