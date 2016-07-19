@@ -75,13 +75,13 @@ $(TEST_TARGET): $(TEST_OBJECTS)
 # source and header files as dependencies
 # '-o $@' - send output to the target
 # '-c $<' - compile, unlinked, the first dependency
-test\obj\test.o: test\test.c
+test\obj\test.o: test\src\test.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-test\obj\solutions_tests.o: test\src\solutions_tests.c
+test\obj\solutions_tests.o: test\src\solutions\solutions_tests.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-test\obj\utility_tests.o: test\src\utility_tests.c
+test\obj\utility_tests.o: test\src\utility\utility_tests.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 # build the solutions object file, unlinked, with the relevent
