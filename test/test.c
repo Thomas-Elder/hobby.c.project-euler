@@ -9,13 +9,16 @@ int main(void)
 	int total_tests_passed;
 	int passed;
 
-	total_test_cases = 17;
+	total_test_cases = 21;
 	total_tests_passed = 0;
 	passed = 0;
 
 	printf("%s\n", "");
 	printf("%s\n", "T E S T I N G");
 	printf("%s\n", "");
+
+	/* Testing solutions.c functions */
+	printf("%s\n", "Testing solutions.c functions...");
 
 	/* Testing sum_multiples function */
 	printf("%s\n", "Testing sum_multiples function... ");
@@ -44,15 +47,6 @@ int main(void)
 
 	total_tests_passed += passed;
 
-	/* Testing is_palindrome function */
-	printf("%s\n", "Testing is_palindrome function... ");
-	passed = is_palindrome_all_tests();
-	printf("%s%d\n", "Tests out of 4 passed: ", passed);
-	printf("%s\n", "Testing is_palindrome complete.");
-	printf("%s\n", "");
-
-	total_tests_passed += passed;
-
 	/* Testing largest_palindrome_product function */
 	printf("%s\n", "Testing largest_palindrome_product function... ");
 	passed = largest_palindrome_product_all_tests();
@@ -62,7 +56,26 @@ int main(void)
 
 	total_tests_passed += passed;
 
-	/* Testing other functions */
+	/* Testing utility.c functions */
+	printf("%s\n", "Testing utility.c functions...");
+
+	/* Testing is_palindrome function */
+	printf("%s\n", "Testing is_palindrome function... ");
+	passed = is_palindrome_all_tests();
+	printf("%s%d\n", "Tests out of 4 passed: ", passed);
+	printf("%s\n", "Testing is_palindrome complete.");
+	printf("%s\n", "");
+
+	total_tests_passed += passed;
+
+	/* Testing is_prime function */
+	printf("%s\n", "Testing is_prime function... ");
+	passed = is_prime_all_tests();
+	printf("%s%d\n", "Tests out of 4 passed: ", passed);
+	printf("%s\n", "Testing is_prime complete.");
+	printf("%s\n", "");
+
+	total_tests_passed += passed;
 
 	/* Total test score */
 	printf("%s\n", "Testing complete!");
