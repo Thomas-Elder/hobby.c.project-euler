@@ -67,4 +67,43 @@ int is_palindrome_all_tests(void);
  */
 int is_prime_all_tests(void);
 
+/* pythagorean_triplet_all_tests
+ *
+ * PARAMETERS        : void
+ *
+ * RETURNS           : int
+ *                     An integer from 0-4, indicating how many
+ *                     of the 4 test cases were passed. 
+ *
+ * FUCTION TESTED    : pythagorean_triplet()
+ *
+ * FUNCTION'S SOURCE : utility.c
+ *
+ * TEST CASE #1:
+ *              PARAMETERS : int a = 3
+ *                           int b = 4
+ *                           int c = 5
+ *              EXPECTED   : true
+ *
+ * TEST CASE #2:
+ *              PARAMETERS : int a = 5
+ *                           int b = 4
+ *                           int c = 3
+ *              EXPECTED   : false
+ *
+ * TEST CASE #3: 
+ *              PARAMETERS : int a = 20
+ *                           int b = 21
+ *                           int c = 29
+ *              EXPECTED   : true
+ *
+ * TEST CASE #4: 
+ *              PARAMETERS : int a = 68
+ *                           int b = 285
+ *                           int c = 293
+ *              EXPECTED   : true
+ *
+ * NOTES      : 
+ */
+int pythagorean_triplet_all_tests(void);
 #endif

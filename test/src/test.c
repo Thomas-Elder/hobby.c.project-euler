@@ -122,6 +122,15 @@ int main(void)
 
 	total_tests_passed += passed;
 
+	/* Testing pythagorean_triplet function */
+	printf("%s\n", "Testing pythagorean_triplet function... ");
+	passed = pythagorean_triplet_all_tests();
+	printf("%s%d\n", "Tests out of 4 passed: ", passed);
+	printf("%s\n", "Testing pythagorean_triplet complete.");
+	printf("%s\n", "");
+
+	total_tests_passed += passed;
+
 	/* Total test score */
 	printf("%s\n", "Testing complete!");
 	printf("%s%d\n", "Total number of test cases  : ", total_test_cases);
