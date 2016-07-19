@@ -203,36 +203,4 @@ int largest_palindrome_product_all_tests(void);
  */
 int is_palindrome_all_tests(void);
 
-/* reverse_int_all_tests
- *
- * PARAMETERS        : void
- *
- * RETURNS           : int
- *                     An integer from 0-4, indicating how many
- *                     of the 4 test cases were passed. 
- *
- * FUCTION TESTED    : reverse_int()
- *
- * FUNCTION'S SOURCE : utility.c
- *
- * TEST CASE #1:
- *              PARAMETERS : int value = 999
- *              EXPECTED   : true
- *
- * TEST CASE #2:
- *              PARAMETERS : long long int value = 660066
- *              EXPECTED   : true
- *
- * TEST CASE #3: 
- *              PARAMETERS : long long int value = 66006
- *              EXPECTED   : false
- *
- * TEST CASE #4: 
- *              PARAMETERS : long long int value = 1111112
- *              EXPECTED   : false
- *
- * NOTES      : Might be unnecessary, I think I refactor out the reverse_int function.
- */
-int reverse_int_all_tests(void);
-
 #endif
