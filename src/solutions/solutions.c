@@ -185,7 +185,7 @@ int smallest_multiple(int low, int high) {
 	/* initilise */
 	result = 0;
 
-	for (i = 2520; i < 2147483647; i+=2520) {
+	for (i = 1; i < 2147483647; i++) {
 		for (j = high; j > low; j--) {
 			if (i % j != 0)	{
 				break;

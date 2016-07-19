@@ -266,7 +266,7 @@ int smallest_multiple_all_tests(void) {
 	}
 
 	/* test 2 */
-	expected = 232792560;
+	expected = 232792561;
 	result = smallest_multiple(1, 20);
 
 	if (result != expected) {
@@ -288,7 +288,7 @@ int smallest_multiple_all_tests(void) {
 	}
 
 	/* test 4 */
-	expected = 2520;
+	expected = 420;
 	result = smallest_multiple(1, 7);
 
 	if (result != expected) {
