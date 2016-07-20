@@ -9,7 +9,7 @@ int main(void)
 	int total_tests_passed;
 	int passed;
 
-	total_test_cases = 46;
+	total_test_cases = 47;
 	total_tests_passed = 0;
 	passed = 0;
 
@@ -136,6 +136,15 @@ int main(void)
 	passed = check_answer_all_tests();
 	printf("%s%d\n", "Tests out of 4 passed: ", passed);
 	printf("%s\n", "Testing check_answer complete.");
+	printf("%s\n", "");
+
+	total_tests_passed += passed;
+
+	/* Testing working_directory function */
+	printf("%s\n", "Testing working_directory function... ");
+	passed = working_directory_all_tests();
+	printf("%s%d\n", "Tests out of 4 passed: ", passed);
+	printf("%s\n", "Testing working_directory complete.");
 	printf("%s\n", "");
 
 	total_tests_passed += passed;

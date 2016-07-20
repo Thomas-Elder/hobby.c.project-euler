@@ -237,3 +237,29 @@ int check_answer_all_tests(void) {
 
 	return tests_passed;
 }
+
+/* working_directory_all_tests
+ *
+ */
+int working_directory_all_tests(void) {
+	
+	/* local variables */
+	int tests_passed;
+	char *expected;
+	char result[FILENAME_MAX];
+
+	tests_passed = 0;
+
+	/* test 1 */
+	expected = "E:\\c\\practice\\Project Euler";
+	working_directory(result);
+
+	if (strcmp(result, expected)) {
+		printf("%s\n", "Test 1 Failed!");
+		printf("%s%s%s%s\n", "Expected: ", expected, ". Result: ", result);
+	} else {
+		tests_passed++;
+	}
+
+	return tests_passed;
+}

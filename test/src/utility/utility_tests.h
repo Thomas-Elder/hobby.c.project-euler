@@ -143,4 +143,40 @@ int pythagorean_triplet_all_tests(void);
  */
 int check_answer_all_tests(void);
 
+/* working_directory_all_tests
+ *
+ * PARAMETERS        : void
+ *
+ * RETURNS           : int
+ *                     An integer from 0-4, indicating how many
+ *                     of the 4 test cases were passed. 
+ *
+ * FUCTION TESTED    : working_directory()
+ *
+ * FUNCTION'S SOURCE : utility.c
+ *
+ * TEST CASE #1:
+ *              PARAMETERS : int question = 1
+ *                           long long int answer = 233168
+ *              EXPECTED   : true
+ *
+ * TEST CASE #2:
+ *              PARAMETERS : int question = 1 
+ *                           long long int answer = 5
+ *              EXPECTED   : false
+ *
+ * TEST CASE #3: 
+ *              PARAMETERS : int question = 15
+ *                           long long int answer = 5
+ *              EXPECTED   : false
+ *
+ * TEST CASE #4: 
+ *              PARAMETERS : int question = 270
+ *                           long long int answer = 82282080
+ *              EXPECTED   : true
+ *
+ * NOTES      : 
+ */
+int working_directory_all_tests(void);
+
 #endif
