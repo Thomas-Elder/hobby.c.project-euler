@@ -550,7 +550,7 @@ long long int sum_of_primes_all_tests(void) {
 	}
 
 	/* test 4 */ 
-	expected = 200LLU;
+	expected = 1060LLU;
 	result = sum_of_primes(100);
 
 	if (result != expected) {
