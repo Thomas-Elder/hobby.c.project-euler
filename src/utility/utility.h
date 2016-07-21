@@ -66,19 +66,6 @@ bool is_prime(int value);
  */
 bool is_palindrome(int value);
 
-/* reverse_int
- *
- * PARAMETERS : int value
- *
- * RETURNS    : int
- *
- * PURPOSE    : Returns an integer who's digits are in the reverse order of the
- *              value passed.
- *
- * NOTES      :
- */
-int reverse_int(int value);
-
 /* get_input
  *
  * PARAMETERS : int *input
