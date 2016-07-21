@@ -503,3 +503,62 @@ int special_pythagorean_triplet_all_tests(void) {
 
 	return tests_passed;
 }
+
+/* sum_of_primes_all_tests
+ *
+ */
+long long int sum_of_primes_all_tests(void) {
+
+	/* local variables */
+	int tests_passed;
+	long long int expected;
+	long long int result;
+
+	tests_passed = 0;
+
+	/* test 1 */
+	expected = 17LLU;
+	result = sum_of_primes(10);
+
+	if (result != expected) {
+		printf("%s\n", "Test 1 Failed!");
+		printf("%s%llu%s%llu\n", "Expected: ", expected, ". Result: ", result);
+	} else {
+		tests_passed++;
+	}
+
+	/* test 2 */
+	expected = 142913828922LLU;
+	result = sum_of_primes(2000000);
+
+	if (result != expected) {
+		printf("%s\n", "Test 2 Failed!");
+		printf("%s%llu%s%llu\n", "Expected: ", expected, ". Result: ", result);
+	} else {
+		tests_passed++;
+	}
+
+	/* test 3 */
+	expected = 77LLU;
+	result = sum_of_primes(20);
+
+	if (result != expected) {
+		printf("%s\n", "Test 3 Failed!");
+		printf("%s%llu%s%llu\n", "Expected: ", expected, ". Result: ", result);
+	} else {
+		tests_passed++;
+	}
+
+	/* test 4 */ 
+	expected = 200LLU;
+	result = sum_of_primes(100);
+
+	if (result != expected) {
+		printf("%s\n", "Test 4 Failed!");
+		printf("%s%llu%s%llu\n", "Expected: ", expected, ". Result: ", result);
+	} else {
+		tests_passed++;
+	}
+
+	return tests_passed;
+}

@@ -27,8 +27,8 @@ int main(void) {
 		printf("%s\n", "7 - 10001st prime");
 		printf("%s\n", "8 - Largest product in a series");
 		printf("%s\n", "9 - Special Pythagorean triplet");
-		/*printf("%s\n", "10 - Summation of primes");
-		printf("%s\n", "11 - Largest product in a grid");
+		printf("%s\n", "10 - Summation of primes");
+		/*printf("%s\n", "11 - Largest product in a grid");
 		printf("%s\n", "12 - Highly divisible triangular number");*/
 		printf("%s\n", "0 - Exit");
 
@@ -69,6 +69,9 @@ void solutions(int menuChoice) {
 			break;
 		case 9:
 			problem_9();
+			break;
+		case 10:
+			problem_10();
 			break;
 		case 0:
 			break;	
@@ -301,12 +304,23 @@ void problem_9() {
 void problem_10() {
 
 	/* local variables */
+	long long int result;
 
   /* print title and problem */
 	printf("%s\n", "Summation of primes");
 	printf("%s\n", "The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.");
 	printf("%s\n", "Find the sum of all the primes below two million.");
 
+	result = sum_of_primes(2000000);
+
 	/* print result */
-	printf("%s\n", "Solution not yet implemented");
+	printf("%s%llu\n", "The result is: ", result);
+	
+	/* check the result */
+	if (check_answer(9, result))
+		printf("%s\n", "Confirmed correct on Project Euler.");
+	else 
+		printf("%s\n", "Answer is incorrect.");
+
+	printf("\n");
 }

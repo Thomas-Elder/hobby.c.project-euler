@@ -9,7 +9,7 @@ int main(void)
 	int total_tests_passed;
 	int passed;
 
-	total_test_cases = 47;
+	total_test_cases = 51;
 	total_tests_passed = 0;
 	passed = 0;
 
@@ -97,6 +97,15 @@ int main(void)
 	passed = special_pythagorean_triplet_all_tests();
 	printf("%s%d\n", "Tests out of 1 passed: ", passed);
 	printf("%s\n", "Testing special_pythagorean_triplet complete.");
+	printf("%s\n", "");
+
+	total_tests_passed += passed;
+
+	/* Testing sum_of_primes function */
+	printf("%s\n", "Testing sum_of_primes function... ");
+	passed = sum_of_primes_all_tests();
+	printf("%s%d\n", "Tests out of 4 passed: ", passed);
+	printf("%s\n", "Testing sum_of_primes complete.");
 	printf("%s\n", "");
 
 	total_tests_passed += passed;

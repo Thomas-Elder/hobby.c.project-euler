@@ -145,4 +145,16 @@ long long int largest_product_in_a_series(char *filepath, int product_count);
  */
 int special_pythagorean_triplet(int limit);
 
+/* sum_of_primes
+ *
+ * PARAMETERS : int limit
+ *
+ * PURPOSE    : to return the sum of prime numbers below some limit
+ *
+ * RETURNS    : long long int
+ *
+ * NOTES      :
+ */
+long long int sum_of_primes(int limit);
+
 #endif

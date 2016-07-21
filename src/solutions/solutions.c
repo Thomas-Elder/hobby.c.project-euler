@@ -369,3 +369,21 @@ int special_pythagorean_triplet(int limit) {
 
 	return result;
 }
+
+/* sum_of_primes
+ *
+ */
+long long int sum_of_primes(int limit) {
+
+	/* local variables */
+	int i, result;
+
+	result = 0;
+
+	for (i = 2; i < limit; i++) {
+		if (is_prime(i))
+			result += i;
+	}
+
+	return result;
+}
