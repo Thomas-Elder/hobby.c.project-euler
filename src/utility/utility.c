@@ -51,6 +51,35 @@ bool is_prime(int value) {
 	return true;
 }
 
+/* is_prime
+ * 
+ * Overloaded is_prime(int) function to handle bigger prime problems.
+ *
+ */
+bool is_prime_ll(long long int value) {
+
+	/* local variables */
+	double square_root;
+	long long int i, limit;
+
+	square_root = sqrt(value);
+	limit = floor(square_root);
+
+	if (value == 2 || value == 3)
+		return true;
+
+	if (value % 2 == 0 || value % 3 == 0)
+		return false;
+
+	for (i = 5; i <= limit; i += 6) {
+
+		if (value % i == 0 || value % (i + 2) == 0)
+			return false;
+	}
+
+	return true;
+}
+
 /* pythagorean_triplet
  *
  * This function first tests whether a < b < c holds for the three

@@ -304,20 +304,21 @@ void problem_9() {
 void problem_10() {
 
 	/* local variables */
-	long long int result;
+	long long int result, limit;
 
   /* print title and problem */
 	printf("%s\n", "Summation of primes");
 	printf("%s\n", "The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.");
 	printf("%s\n", "Find the sum of all the primes below two million.");
 
-	result = sum_of_primes(2000000);
+	limit = 2000000LLU;
+	result = sum_of_primes(limit);
 
 	/* print result */
 	printf("%s%llu\n", "The result is: ", result);
 	
 	/* check the result */
-	if (check_answer(9, result))
+	if (check_answer(10, result))
 		printf("%s\n", "Confirmed correct on Project Euler.");
 	else 
 		printf("%s\n", "Answer is incorrect.");

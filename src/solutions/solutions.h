@@ -147,7 +147,7 @@ int special_pythagorean_triplet(int limit);
 
 /* sum_of_primes
  *
- * PARAMETERS : int limit
+ * PARAMETERS : long long int limit
  *
  * PURPOSE    : to return the sum of prime numbers below some limit
  *
@@ -155,6 +155,6 @@ int special_pythagorean_triplet(int limit);
  *
  * NOTES      :
  */
-long long int sum_of_primes(int limit);
+long long int sum_of_primes(long long int limit);
 
 #endif

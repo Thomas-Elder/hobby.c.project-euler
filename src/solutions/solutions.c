@@ -373,15 +373,15 @@ int special_pythagorean_triplet(int limit) {
 /* sum_of_primes
  *
  */
-long long int sum_of_primes(int limit) {
+long long int sum_of_primes(long long int limit) {
 
 	/* local variables */
-	int i, result;
+	long long int i, result;
 
-	result = 0;
+	result = 2LLU;
 
-	for (i = 2; i < limit; i++) {
-		if (is_prime(i))
+	for (i = 3; i < limit; i+=2) {
+		if (is_prime_ll(i))
 			result += i;
 	}
 

@@ -53,6 +53,18 @@ bool pythagorean_triplet(int a, int b, int c);
  */
 bool is_prime(int value);
 
+/* is_prime_ll
+ *
+ * PARAMETERS : long long int value
+ *
+ * RETURNS    : bool
+ *
+ * PURPOSE    : Tests for primeness of an long long integer.
+ *
+ * NOTES      : 
+ */
+bool is_prime_ll(long long int value);
+
 /* is_palindrome
  *
  * PARAMETERS : int value
