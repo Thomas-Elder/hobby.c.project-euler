@@ -138,7 +138,7 @@ void problem_1() {
 void problem_2() {
 	
 	/* local variables */
-	int input, limit;
+	int input, limit, result;
 
 	/* print title and problem */
 	printf("%s\n", "Even Fibonacci numbers");
@@ -153,21 +153,34 @@ void problem_2() {
 
 	if (input == 0) {
 		limit = 4000000;
+
+		result = sum_even_fibonacci_numbers(limit);
+
+		/* print result */
+		printf("The sum of even Fibonacci numbers under %d is: %d\n", limit, result);
+
+		if (check_answer(2, result))
+			printf("%s\n", "Confirmed correct on Project Euler.");
+		else
+			printf("%s\n", "Answer is incorrect");
+
+		printf("\n");
+
 	} else {
 		printf("%s", "Enter limit for Fibonacci sum: ");
 		get_input(&limit);
-	}
 
-	/* print result */
-	printf("The sum of even Fibonacci numbers under %d is: %d\n", limit, sum_even_fibonacci_numbers(limit));
-	printf("%s\n", "Confirmed correct on Project Euler.");
-	printf("\n");
+		result = sum_even_fibonacci_numbers(limit);
+
+		/* print result */
+		printf("The sum of even Fibonacci numbers under %d is: %d\n", limit, result);
+	}
 }
 
 void problem_3() {
 
 	/* local variables */
-	int input;
+	int input, result;
 	long long int limit;
 
 	/* print title and problem */
@@ -181,18 +194,35 @@ void problem_3() {
 
 	if (input == 0) {
 		limit = 600851475143;
+
+		result = largest_prime_factor(limit);
+		
+		/* print result */
+		printf("The largest prime factor of %llu is %d\n", limit, result);
+
+		if (check_answer(3, result))
+			printf("%s\n", "Confirmed correct on Project Euler.");
+		else
+			printf("%s\n", "Answer is incorrect");
+
+		printf("\n");	
+
 	} else {
 		printf("%s", "Enter the number you'd like to know the largest prime factor of: ");
 		get_input_ll(&limit);
+
+		result = largest_prime_factor(limit);
+
+		/* print result */
+		printf("The largest prime factor of %llu is %d\n", limit, result);
 	}
 
-	/* print result */
-	printf("%s%d\n", "The largest prime factor of 600851475143 is:", largest_prime_factor(limit));
-	printf("%s\n", "Confirmed correct on Project Euler.");
-	printf("\n");	
 }
 
 void problem_4() {
+
+	/* local variables */
+	int result;
 
 	/* print title and problem */
 	printf("%s\n", "Largest palindrome product");
@@ -203,13 +233,23 @@ void problem_4() {
 		" numbers.");
 	printf("\n");
 
+	result = largest_palindrome_product();
+
 	/* print result */
-	printf("%s%d\n", "The largest palimdromic product of two 3 digit numbers is: ", largest_palindrome_product());
-	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("%s%d\n", "The largest palimdromic product of two 3 digit numbers is: ", result);
+	
+	if (check_answer(4, result))
+		printf("%s\n", "Confirmed correct on Project Euler.");
+	else
+		printf("%s\n", "Answer is incorrect");
+
 	printf("\n");
 }
 
 void problem_5() {
+
+	/* local variables */
+	int result;
 
 	/* print title and problem */
 	printf("%s\n", "Smallest multiple");
@@ -217,13 +257,23 @@ void problem_5() {
 		"What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?");
 	printf("\n");
 
+	result = smallest_multiple(1, 20);
+
 	/* print result */
-	printf("%s%d\n", "The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is: ", smallest_multiple(10, 20));
-	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("%s%d\n", "The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is: ", result);
+
+	if(check_answer(5, result))
+		printf("%s\n", "Confirmed correct on Project Euler.");
+	else
+		printf("%s\n", "Answer is incorrect");
+
 	printf("\n");
 }
 
 void problem_6() {
+
+	/* local variables */
+	int result;
 
 	/* print title and problem */
 	printf("%s\n", "Sum square difference");
@@ -236,14 +286,24 @@ void problem_6() {
 		"Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.");
 	printf("\n");
 
+	result = sum_square_difference(100);
+
 	/* print result */
-	printf("%s%d\n", "The difference between the sum of the squares and the square of the sum of the first one hundred natural numbers is: ", sum_square_difference(100));
-	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("%s%d\n", "The difference between the sum of the squares and the square of the sum of the first one hundred natural numbers is: ", result);
+
+	if (check_answer(6, result))
+		printf("%s\n", "Confirmed correct on Project Euler.");
+	else
+		printf("%s\n", "Answer is incorrect");
+
 	printf("\n");	
 }
 
 void problem_7() {
 	
+	/* local variables */
+	int result;
+
 	/* print title and problem */
 	printf("%s\n", "10001st prime");
 	printf("%s\n%s\n", 
@@ -251,9 +311,16 @@ void problem_7() {
 		"What is the 10 001st prime number?");
 		printf("\n");
 
+	result = nth_prime(10001);
+
 	/* print result */
-	printf("%s%d\n", "the 10 001st prime number is: ", nth_prime(10001));
-	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("%s%d\n", "the 10 001st prime number is: ", result);
+
+	if(check_answer(7, result))
+		printf("%s\n", "Confirmed correct on Project Euler.");
+	else
+		printf("%s\n", "Answer is incorrect");
+	
 	printf("\n");
 }
 
@@ -261,6 +328,7 @@ void problem_8() {
 
 	/* local variables */
 	char *filepath = "E:\\c\\practice\\Project Euler\\doc\\problem_8_series.txt";
+	long long int result;
 
 	/* print title and problem */
 	printf("%s\n", "Largest product in a series");
@@ -269,9 +337,16 @@ void problem_8() {
 		"Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?");
 		printf("\n");
 
+	result = largest_product_in_a_series(filepath, 13);
+
 	/* print result */
-	printf("%s%llu\n", "Largest product in this series is: ", largest_product_in_a_series(filepath, 13));
-	printf("%s\n", "Confirmed correct on Project Euler.");
+	printf("%s%llu\n", "Largest product in this series is: ", result);
+	
+	if (check_answer(8, result))
+		printf("%s\n", "Confirmed correct on Project Euler.");
+	else
+		printf("%s\n", "Answer is incorrect.");
+
 	printf("\n");	
 }
 
